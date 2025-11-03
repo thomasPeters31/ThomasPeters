@@ -1,2 +1,5 @@
 # ThomasPeters
-My website
+Portfolio
+- CV
+- Socials
+- Latest work
