@@ -5,42 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Thomas Peters — Portfolio</title>
   <meta name="description" content="Portfolio and CV site for Thomas Peters, Computer Science student at Keele University seeking placement year.">
-  <style>
-    :root{--accent:#2563eb;--muted:#6b7280;--bg:#0f172a;--card:#0b1220;--glass:rgba(255,255,255,0.04)}
-    *{box-sizing:border-box}
-    body{font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; margin:0; color:#e6eef8; background:linear-gradient(180deg,#071025 0%, #07162b 100%);-webkit-font-smoothing:antialiased}
-    a{color:var(--accent); text-decoration:none}
-    header{display:flex;align-items:center;justify-content:space-between;padding:28px 20px;max-width:1100px;margin:0 auto}
-    .logo{display:flex;gap:12px;align-items:center}
-    .logo .mark{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
-    nav{display:flex;gap:14px;align-items:center}
-    .btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;font-weight:600}
-
-    .container{max-width:1100px;margin:30px auto;padding:0 20px}
-    .hero{display:grid;grid-template-columns:1fr 360px;gap:32px;align-items:center}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;padding:20px;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
-    h1{font-size:28px;margin:0 0 8px}
-    .sub{color:var(--muted);margin:0 0 16px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .chip{background:var(--glass);padding:8px 10px;border-radius:999px;font-size:13px;color:#dbeafe}
-
-    .profile-card{padding:18px;text-align:center}
-    .avatar{width:120px;height:120px;border-radius:20px;background:linear-gradient(135deg,#0ea5e9,#7c3aed);display:inline-flex;align-items:center;justify-content:center;font-size:38px;font-weight:700;color:white;margin-bottom:12px}
-    .links{display:flex;flex-direction:column;gap:10px;margin-top:8px}
-    .link-row{display:flex;gap:8px;justify-content:center}
-    .outline{border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:10px}
-
-    section{margin-top:28px}
-    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-    .project{padding:14px;border-radius:10px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);min-height:120px}
-    footer{margin:50px 0 80px;text-align:center;color:var(--muted)}
-
-    @media (max-width:900px){.hero{grid-template-columns:1fr;}.grid-3{grid-template-columns:1fr 1fr}.project{min-height:100px}}
-    @media (max-width:520px){.grid-3{grid-template-columns:1fr}.logo .label{display:none}.avatar{width:96px;height:96px}}
-
-    .muted{color:var(--muted)}
-    .mb12{margin-bottom:12px}
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
@@ -160,9 +125,9 @@
       <p style="margin:6px 0">🔗 <a href="https://www.linkedin.com/in/placeholder" target="_blank">linkedin.com/in/placeholder</a></p>
 
       <form action="mailto:t.peters.31@outlook.com" method="post" enctype="text/plain" style="margin-top:12px">
-        <input name="name" placeholder="Your name" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:8px">
-        <input name="subject" placeholder="Subject" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:8px">
-        <textarea name="message" placeholder="Message" rows="4" style="width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit;margin-bottom:8px"></textarea>
+        <input name="name" placeholder="Your name">
+        <input name="subject" placeholder="Subject">
+        <textarea name="message" placeholder="Message" rows="4"></textarea>
         <div style="display:flex;gap:8px">
           <button type="submit" class="btn">Send</button>
           <button type="reset" class="outline" style="background:transparent;color:inherit">Reset</button>
