@@ -114,6 +114,9 @@ h1 {
 }
 
 .avatar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 120px;              /* set the size of the avatar box */
   height: 120px;
   border-radius: 50%;        /* makes it circular */
@@ -126,7 +129,9 @@ h1 {
 .avatar img {
   width: 100%;
   height: 100%;
-  object-fit: cover;         /* crops and fills the area nicely */
+  max-width: 120px;     /* ensures image never exceeds container */
+  max-height: 120px;
+  object-fit: cover;
   display: block;
 }
 
