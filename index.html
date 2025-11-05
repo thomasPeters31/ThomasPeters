@@ -1,27 +1,21 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Thomas Peters — Portfolio</title>
   <meta name="description" content="Portfolio and CV site for Thomas Peters, Computer Science student at Keele University seeking placement year.">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Header / Navigation -->
   <header>
     <div class="logo">
       <div class="mark">TP</div>
       <div>
-        <div class="name">Thomas Peters</div>
-        <div class="subtitle">Aspiring Software Engineer | Computer Science Student</div>
+        <div style="font-weight:700">Thomas Peters</div>
+        <div class="muted" style="font-size:13px">
+          Aspiring Software Engineer | Computer Science Student at Keele University
+        </div>
       </div>
     </div>
     <nav>
@@ -35,27 +29,31 @@
   <main class="container">
     <!-- Hero Section -->
     <section class="hero">
-      <div class="card fade-in">
+      <div class="card">
         <h1>Thomas Peters</h1>
-        <p class="sub">Computer Science undergraduate at <strong>Keele University</strong> — seeking a placement year in software engineering, data science or backend development. Strong foundations in algorithms, OOP, databases, and web development.</p>
+        <p class="sub">
+          Computer Science undergraduate at <strong>Keele University</strong> — seeking a placement year in software engineering, data science or backend development. Strong foundations in algorithms, OOP, databases, and web development.
+        </p>
 
-        <div class="section">
-          <h3>About Me</h3>
-          <p class="muted">I enjoy building practical applications, learning new technologies, and collaborating on real-world problems. Currently exploring cloud services, containerisation, and scalable APIs.</p>
+        <div class="mb12">
+          <h3 style="margin:0 0 8px">About me</h3>
+          <p class="muted" style="margin:0">
+            I enjoy building practical applications, learning new technologies, and collaborating with teams on real-world problems. Currently exploring cloud services, containerisation, and scalable APIs.
+          </p>
         </div>
 
-        <div class="section">
-          <h3>Quick Links</h3>
-          <div class="quick-links vertical-links">
+        <div class="mb12">
+          <h3 style="margin:0 0 8px">Quick links</h3>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
             <a class="outline" href="https://github.com/thomasPeters31" target="_blank">GitHub</a>
             <a class="outline" href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank">LinkedIn</a>
             <a class="outline" href="assets/CV.pdf" target="_blank">CV (PDF)</a>
-            <a class="outline" href="mailto:t.peters.31@outlook.com">Email</a>
+            <a class="outline" href="mailto:t.peters.31@outlook.com">Email me</a>
           </div>
         </div>
 
-        <div id="skills" class="section">
-          <h3>Technical Skills</h3>
+        <div id="skills">
+          <h3 style="margin:0 0 8px">Technical skills</h3>
           <div class="skills">
             <div class="chip">Python</div>
             <div class="chip">Java</div>
@@ -63,88 +61,102 @@
             <div class="chip">JavaScript</div>
             <div class="chip">CSS</div>
             <div class="chip">SQL</div>
-            <div class="chip">Git</div>
+            <div class="chip">Git (learning)</div>
           </div>
         </div>
       </div>
 
-      <aside class="card profile-card fade-in">
-        <div class="avatar"><img src="assets/headshot.JPG" alt="Thomas Peters Headshot"></div>
-        <h4>Thomas Peters</h4>
-        <div class="muted small">BSc Computer Science — Keele University</div>
-        <div class="links vertical-links">
-          <a class="outline" href="assets/CV.pdf" target="_blank">CV</a>
-          <a class="outline" href="https://github.com/TOP-Tom31" target="_blank">GitHub</a>
-          <a class="outline" href="https://www.linkedin.com/in/placeholder" target="_blank">LinkedIn</a>
-          <a class="outline" href="mailto:t.peters.31@outlook.com">Email</a>
+      <aside class="card profile-card">
+        <div class="avatar"><img src="assets/headshot.JPG" alt="Headshot of Thomas Peters"></div>
+        <div style="font-weight:700">Thomas Peters</div>
+        <div class="muted" style="font-size:13px">BSc Computer Science — Keele University</div>
+
+        <div class="links">
+          <div class="link-row">
+            <a class="outline" href="assets/CV.pdf" target="_blank">Download CV</a>
+            <a class="outline" href="https://github.com/TOP-Tom31" target="_blank">GitHub</a>
+          </div>
+          <div class="link-row">
+            <a class="outline" href="https://www.linkedin.com/in/placeholder" target="_blank">LinkedIn</a>
+            <a class="outline" href="mailto:t.peters.31@outlook.com">Email</a>
+          </div>
         </div>
       </aside>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="card fade-in">
-      <h2>Selected Projects</h2>
+    <section id="projects" class="card">
+      <h2 style="margin-top:0">Selected projects</h2>
       <div class="grid-3">
         <div class="project">
-          <h4>Portfolio Website</h4>
-          <p class="muted">Responsive personal portfolio built with HTML, CSS, and JS. Hosted on GitHub Pages.</p>
+          <h4 style="margin:0 0 8px">Portfolio Website</h4>
+          <p class="muted" style="margin:0 0 8px">
+            A personal website made with HTML/CSS/JS to showcase projects and CV. Hosted on GitHub Pages.
+          </p>
           <a href="https://github.com/TOP-Tom31/portfolio" target="_blank">View repo →</a>
         </div>
+
         <div class="project">
-          <h4>AI Chatbot</h4>
-          <p class="muted">Python chatbot using NLP and API integrations for smart responses.</p>
+          <h4 style="margin:0 0 8px">AI Chatbot</h4>
+          <p class="muted" style="margin:0 0 8px">
+            University project: a Python chatbot using NLP libraries and external APIs for enhanced responses.
+          </p>
           <a href="https://github.com/TOP-Tom31/ai-chatbot" target="_blank">View repo →</a>
         </div>
+
         <div class="project">
-          <h4>Student DB System</h4>
-          <p class="muted">MySQL-backed CRUD web app with authentication and user-friendly interface.</p>
+          <h4 style="margin:0 0 8px">Student DB System</h4>
+          <p class="muted" style="margin:0 0 8px">
+            MySQL-backed web app allowing CRUD operations with authentication and simple UI.
+          </p>
           <a href="https://github.com/TOP-Tom31/student-db" target="_blank">View repo →</a>
         </div>
       </div>
     </section>
 
-    <!-- Experience Section -->
-    <section class="card fade-in">
-      <h2>Experience & Education</h2>
-      <div class="experience">
-        <div>
-          <h4>Education</h4>
-          <p class="muted">BSc Computer Science — Keele University (2022–Present). Relevant modules: Algorithms, Software Engineering, Databases.</p>
+    <!-- Experience & Education Section -->
+    <section class="card" style="margin-top:18px">
+      <h2 style="margin-top:0">Experience & Education</h2>
+      <div style="display:flex;gap:20px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px">
+          <h4 style="margin:0 0 6px">Education</h4>
+          <p class="muted" style="margin:0">
+            BSc Computer Science — Keele University (2022 – Present). Relevant modules: Algorithms, Software Engineering, Databases.
+          </p>
         </div>
-        <div>
-          <h4>Work / Volunteering</h4>
-          <p class="muted">[Role] at [Company] — contributed to testing, feature development, and documentation. [Month Year – Month Year]</p>
+        <div style="flex:1;min-width:260px">
+          <h4 style="margin:0 0 6px">Work / Volunteering</h4>
+          <p class="muted" style="margin:0">
+            [Role] at [Company] — contributed to testing, small feature development, and documentation. [Month Year – Month Year]
+          </p>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="card fade-in">
-      <h2>Contact</h2>
-      <p class="muted">Interested in offering a placement or want to connect? Reach out below.</p>
-      <p>📞 +44 7803 008698</p>
-      <p>📧 <a href="mailto:t.peters.31@outlook.com">t.peters.31@outlook.com</a></p>
-      <p>🔗 <a href="https://www.linkedin.com/in/placeholder" target="_blank">linkedin.com/in/placeholder</a></p>
+    <section id="contact" class="card" style="margin-top:18px">
+      <h2 style="margin-top:0">Contact</h2>
+      <p class="muted">Interested in offering a placement or want to chat? Send an email or connect on LinkedIn.</p>
+      <p style="margin:6px 0">📞 +44 7803 008698</p>
+      <p style="margin:6px 0">📧 <a href="mailto:t.peters.31@outlook.com">t.peters.31@outlook.com</a></p>
+      <p style="margin:6px 0">🔗 <a href="https://www.linkedin.com/in/placeholder" target="_blank">linkedin.com/in/placeholder</a></p>
 
-      <form action="mailto:t.peters.31@outlook.com" method="post" enctype="text/plain">
-        <input name="name" placeholder="Your Name" required>
+      <form action="mailto:t.peters.31@outlook.com" method="post" enctype="text/plain" style="margin-top:12px">
+        <input name="name" placeholder="Your name">
         <input name="subject" placeholder="Subject">
-        <textarea name="message" placeholder="Message" rows="4" required></textarea>
-        <div class="form-actions">
+        <textarea name="message" placeholder="Message" rows="4"></textarea>
+        <div style="display:flex;gap:8px">
           <button type="submit" class="btn">Send</button>
-          <button type="reset" class="outline">Reset</button>
+          <button type="reset" class="outline" style="background:transparent;color:inherit">Reset</button>
         </div>
       </form>
     </section>
 
-    <!-- Footer -->
     <footer>
       <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
     </footer>
   </main>
 
-  <!-- JS -->
-  <script src="script.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
