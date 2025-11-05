@@ -5,18 +5,23 @@
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Thomas Peters — Portfolio</title>
   <meta name="description" content="Portfolio and CV site for Thomas Peters, Computer Science student at Keele University seeking placement year.">
-  <link rel="stylesheet" href="styles.css">
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Header / Navigation -->
   <header>
     <div class="logo">
       <div class="mark">TP</div>
       <div>
         <div class="name">Thomas Peters</div>
-        <div class="subtitle">Aspiring Software Engineer | Computer Science Student at Keele University</div>
+        <div class="subtitle">Aspiring Software Engineer | Computer Science Student</div>
       </div>
     </div>
     <nav>
@@ -28,10 +33,11 @@
   </header>
 
   <main class="container">
+    <!-- Hero Section -->
     <section class="hero">
       <div class="card fade-in">
         <h1>Thomas Peters</h1>
-        <p class="sub">Computer Science undergraduate at <strong>Keele University</strong> — seeking a placement year in software engineering, data science or backend development.</p>
+        <p class="sub">Computer Science undergraduate at <strong>Keele University</strong> — seeking a placement year in software engineering, data science or backend development. Strong foundations in algorithms, OOP, databases, and web development.</p>
 
         <div class="section">
           <h3>About Me</h3>
@@ -63,10 +69,9 @@
       </div>
 
       <aside class="card profile-card fade-in">
-        <div class="avatar"><img src="assets/headshot.JPG" alt="Headshot of Thomas Peters"></div>
+        <div class="avatar"><img src="assets/headshot.JPG" alt="Thomas Peters Headshot"></div>
         <h4>Thomas Peters</h4>
         <div class="muted small">BSc Computer Science — Keele University</div>
-
         <div class="links">
           <a class="outline" href="assets/CV.pdf" target="_blank">CV</a>
           <a class="outline" href="https://github.com/TOP-Tom31" target="_blank">GitHub</a>
@@ -76,6 +81,7 @@
       </aside>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="card fade-in">
       <h2>Selected Projects</h2>
       <div class="grid-3">
@@ -97,6 +103,7 @@
       </div>
     </section>
 
+    <!-- Experience Section -->
     <section class="card fade-in">
       <h2>Experience & Education</h2>
       <div class="experience">
@@ -111,6 +118,7 @@
       </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact" class="card fade-in">
       <h2>Contact</h2>
       <p class="muted">Interested in offering a placement or want to connect? Reach out below.</p>
@@ -119,7 +127,7 @@
       <p>🔗 <a href="https://www.linkedin.com/in/placeholder" target="_blank">linkedin.com/in/placeholder</a></p>
 
       <form action="mailto:t.peters.31@outlook.com" method="post" enctype="text/plain">
-        <input name="name" placeholder="Your name" required>
+        <input name="name" placeholder="Your Name" required>
         <input name="subject" placeholder="Subject">
         <textarea name="message" placeholder="Message" rows="4" required></textarea>
         <div class="form-actions">
@@ -129,11 +137,13 @@
       </form>
     </section>
 
+    <!-- Footer -->
     <footer>
       <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
     </footer>
   </main>
 
+  <!-- JS -->
   <script src="script.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
