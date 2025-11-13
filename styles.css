@@ -217,17 +217,3 @@ input, textarea {
   }
 }
 
-@media (max-width:520px) {
-  .grid-3 {
-    grid-template-columns: 1fr;
-  }
-
-  .logo .label {
-    display: none;
-  }
-
-  .avatar {
-    width: 96px;
-    height: 96px;
-  }
-}
