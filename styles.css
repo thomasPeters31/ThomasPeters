@@ -1,3 +1,4 @@
+/* Theme variables */
 :root {
   --accent: #2563eb;
   --muted: #6b7280;
@@ -6,10 +7,12 @@
   --glass: rgba(255,255,255,0.04);
 }
 
+/* Base reset */
 * {
   box-sizing: border-box;
 }
 
+/* Global styles */
 body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin: 0;
@@ -23,6 +26,7 @@ a {
   text-decoration: none;
 }
 
+/* Header */
 header {
   display: flex;
   align-items: center;
@@ -58,6 +62,7 @@ nav {
   flex-wrap: wrap;
 }
 
+/* Mobile menu button */
 .menu-toggle {
   display: none;
   width: 44px;
@@ -107,6 +112,7 @@ nav {
   padding: 0 18px;
 }
 
+/* Hero layout */
 .hero {
   display: grid;
   grid-template-columns: 1fr 340px;
@@ -114,6 +120,7 @@ nav {
   align-items: start;
 }
 
+/* Card styles */
 .card {
   background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   border-radius: 12px;
@@ -137,6 +144,7 @@ h1 {
   gap: 8px;
 }
 
+/* Skill pill */
 .chip {
   background: var(--glass);
   padding: 8px 10px;
@@ -208,6 +216,7 @@ section {
   gap: 14px;
 }
 
+/* Project cards */
 .project {
   padding: 14px;
   border-radius: 10px;

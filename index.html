@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Site header with logo and navigation -->
   <header>
     <div class="logo">
       <div class="mark">TP</div>
@@ -19,10 +20,12 @@
         </div>
       </div>
     </div>
+    <!-- Mobile menu trigger -->
     <button class="menu-toggle" aria-expanded="false" aria-controls="site-nav">
       <span></span><span></span><span></span>
       <span class="sr-only">Toggle navigation</span>
     </button>
+    <!-- Primary navigation links -->
     <nav id="site-nav">
       <a class="outline" href="#projects">Projects</a>
       <a class="outline" href="#skills">Skills</a>
@@ -32,7 +35,7 @@
   </header>
 
   <main class="container">
-    <!-- Hero Section -->
+    <!-- Hero with intro, about, and quick links -->
     <section class="hero">
       <div class="card">
         <h1>Thomas Peters</h1>
@@ -76,6 +79,7 @@
         </div>
       </div>
 
+      <!-- Sidebar profile card -->
       <aside class="card profile-card">
         <div class="avatar"><img src="assets/headshot.JPG" alt="Headshot of Thomas Peters"></div>
         <div style="font-weight:700">Thomas Peters</div>
@@ -157,6 +161,7 @@
   </main>
 
   <script>
+    // Keep footer year current
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
