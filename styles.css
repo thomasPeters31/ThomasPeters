@@ -176,12 +176,13 @@ h2 {
   align-items: center;
   justify-content: flex-start;
   align-self: start; /* keep card height to content so it stays compact */
+  justify-self: start; /* align with the start of the adjacent container on laptop */
   gap: 4px;
   width: fit-content;
   min-width: 280px;
   max-width: 340px;
   height: fit-content; /* hug contents so there are no empty areas */
-  margin: 0 auto;
+  margin: 0; /* prevent centering so it lines up with the main column */
 }
 
 /* Circular avatar container */
