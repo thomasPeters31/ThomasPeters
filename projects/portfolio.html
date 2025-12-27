@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website | Thomas Peters</title>
+  <meta name="description" content="Case study for Thomas Peters' portfolio website: goals, stack, and outcomes.">
+  <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <!-- Shared site header for consistent navigation -->
+  <header>
+    <div class="logo">
+      <div class="mark">TP</div>
+      <div>
+        <div style="font-weight:700">Thomas Peters</div>
+        <div class="muted" style="font-size:13px">
+          Aspiring Software Engineer | Computer Science Student at Keele University
+        </div>
+      </div>
+    </div>
+    <nav id="site-nav">
+      <a class="outline" href="../index.html#projects">Projects</a>
+      <a class="outline" href="../index.html#skills">Skills</a>
+      <a class="outline" href="../index.html#contact">Contact</a>
+      <a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </nav>
+  </header>
+
+  <!-- Project case study content -->
+  <main class="container">
+    <!-- Overview + quick navigation -->
+    <section class="card fade-in">
+      <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <span>Portfolio Website</span>
+      </div>
+
+      <!-- Hero split: summary + snapshot -->
+      <div class="page-hero" style="margin-top:16px">
+        <div>
+          <h1 style="margin-top:0">Portfolio Website</h1>
+          <p class="sub">
+            A polished, fast-loading personal site that presents my background, skills, and projects in a clear,
+            recruiter-friendly format. Built to be responsive, accessible, and easy to expand.
+          </p>
+          <div class="cta-row">
+            <a class="btn" href="https://github.com/thomasPeters31/ThomasPeters" target="_blank" rel="noopener">View repo</a>
+            <a class="outline" href="../index.html#projects">Back to projects</a>
+          </div>
+        </div>
+        <!-- Snapshot panel for role, focus, status -->
+        <div class="detail-card">
+          <h4 style="margin:0 0 10px">Project snapshot</h4>
+          <p class="muted" style="margin:0 0 8px">Role: Designer + Developer</p>
+          <p class="muted" style="margin:0 0 8px">Focus: Personal branding, clarity, and speed</p>
+          <p class="muted" style="margin:0">Status: Live</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Goals and approach details -->
+    <section class="card fade-in" style="margin-top:18px">
+      <h2 style="margin-top:0">Goals and approach</h2>
+      <p class="muted">
+        The primary goal was to create a single-page experience that communicates strengths quickly. The layout prioritizes
+        core information in the first screen, with a clean structure for projects, skills, and contact details.
+      </p>
+      <div class="detail-grid" style="margin-top:14px">
+        <div class="detail-card">
+          <h4 style="margin:0 0 8px">Key features</h4>
+          <p class="muted" style="margin:0">Responsive hero layout, fast navigation, and concise project summaries.</p>
+        </div>
+        <div class="detail-card">
+          <h4 style="margin:0 0 8px">Performance</h4>
+          <p class="muted" style="margin:0">Lightweight HTML/CSS/JS with subtle animations and optimized assets.</p>
+        </div>
+        <div class="detail-card">
+          <h4 style="margin:0 0 8px">Maintainability</h4>
+          <p class="muted" style="margin:0">Structured sections and reusable styles for quick edits as projects grow.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tech stack tags -->
+    <section class="card fade-in" style="margin-top:18px">
+      <h2 style="margin-top:0">Tech stack</h2>
+      <div class="tag-list">
+        <span class="tag">HTML</span>
+        <span class="tag">CSS</span>
+        <span class="tag">JavaScript</span>
+        <span class="tag">GitHub Pages</span>
+        <span class="tag">Responsive Design</span>
+      </div>
+    </section>
+
+    <!-- Outcome summary -->
+    <section class="card fade-in" style="margin-top:18px">
+      <h2 style="margin-top:0">Outcome</h2>
+      <p class="muted">
+        The site provides a professional, recruiter-ready snapshot with clear calls to action. It is designed to scale with
+        additional case studies, while staying fast and visually consistent.
+      </p>
+    </section>
+
+    <footer class="fade-in">
+      <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
