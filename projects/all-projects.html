@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Projects | Thomas Peters</title>
+  <meta name="description" content="Full list of Thomas Peters' software projects.">
+  <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">TP</div>
+      <div>
+        <div style="font-weight:700">Thomas Peters</div>
+        <div class="muted" style="font-size:13px">
+          Aspiring Software Engineer | Computer Science Student at Keele University
+        </div>
+      </div>
+    </div>
+    <nav id="site-nav">
+      <a class="outline" href="../index.html#projects">Projects</a>
+      <a class="outline" href="../index.html#skills">Skills</a>
+      <a class="outline" href="../index.html#contact">Contact</a>
+      <a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card fade-in">
+      <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <span>All projects</span>
+      </div>
+
+      <div class="section-head" style="margin-top:16px">
+        <h1 style="margin:0">All projects</h1>
+        <a class="outline" href="../index.html#projects">Back to selected projects</a>
+      </div>
+
+      <p class="sub" style="margin-top:10px">
+        A complete list of my projects. Each entry links to its case study or project page.
+      </p>
+
+      <div class="project-list">
+        <div class="project-row">
+          <div>
+            <h4>Portfolio Website</h4>
+            <p class="muted">Personal website built with HTML, CSS, and JS to present projects and CV.</p>
+            <div class="project-meta">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Live</span>
+            </div>
+          </div>
+          <div class="project-cta">
+            <a class="outline" href="portfolio.html">Open case study →</a>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div>
+            <h4>Esports Website</h4>
+            <p class="muted">Modern site for a competitive esports team with team profiles and match updates.</p>
+            <div class="project-meta">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">In development</span>
+            </div>
+          </div>
+          <div class="project-cta">
+            <a class="outline" href="esports.html">Open case study →</a>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div>
+            <h4>Student DB System</h4>
+            <p class="muted">MySQL-backed web app allowing CRUD operations with authentication and a simple UI.</p>
+            <div class="project-meta">
+              <span class="tag">MySQL</span>
+              <span class="tag">Authentication</span>
+              <span class="tag">CRUD</span>
+            </div>
+          </div>
+          <div class="project-cta">
+            <a class="outline" href="student-db.html">Open case study →</a>
+          </div>
+        </div>
+
+        <div class="project-row">
+          <div>
+            <h4>File Converter</h4>
+            <p class="muted">Utility project focused on converting files between formats with a clean interface.</p>
+            <div class="project-meta">
+              <span class="tag">C#</span>
+              <span class="tag">.NET</span>
+              <span class="tag">UI</span>
+            </div>
+          </div>
+          <div class="project-cta">
+            <a class="outline" href="fileConverter.html">Open case study →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="fade-in">
+      <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
