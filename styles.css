@@ -251,6 +251,10 @@ section {
   gap: 18px;
 }
 
+.project-column {
+  grid-template-columns: 1fr;
+}
+
 .section-head {
   display: flex;
   align-items: center;
