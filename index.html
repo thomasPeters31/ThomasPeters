@@ -6,11 +6,16 @@
   <title>Thomas Peters — Portfolio</title>
   <meta name="description" content="Portfolio and CV site for Thomas Peters, Computer Science student at Keele University seeking placement year.">
   <link rel="icon" type="image/jpg" href="assets/headshot.JPG">
-  <!-- Global styles for layout, theme, and responsive rules -->
+  <!-- Global styles: layout, theme variables, animations, and responsive rules -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Site header with logo and navigation for primary sections -->
+
+  <!-- =====================================================================
+       Site Header
+       Logo mark on the left, primary navigation links on the right.
+       Hides on narrow mobile screens via CSS.
+  ====================================================================== -->
   <header>
     <div class="logo">
       <div class="mark">TP</div>
@@ -21,7 +26,6 @@
         </div>
       </div>
     </div>
-    <!-- Primary navigation links -->
     <nav id="site-nav">
       <a class="outline" href="#projects">Projects</a>
       <a class="outline" href="#skills">Skills</a>
@@ -30,16 +34,26 @@
     </nav>
   </header>
 
-  <!-- Main content wrapper to constrain width and add spacing -->
+  <!-- =====================================================================
+       Page Content
+       Max-width container with consistent padding across all viewports.
+  ====================================================================== -->
   <main class="container">
-    <!-- Hero with intro, about, and quick links; spans 2-column layout on desktop -->
+
+    <!-- Hero Section
+         Two-column layout: intro/skills card on the left, profile card on the right.
+         Collapses to a single column on tablet and below.
+    -->
     <section class="hero fade-in">
+
+      <!-- Main intro card: tagline, about, quick links, and technical skills -->
       <div class="card fade-in">
         <h1>Thomas Peters</h1>
         <p class="sub">
           Computer Science undergraduate at <strong>Keele University</strong> — seeking a placement year in software engineering, data science or backend development. Strong foundations in algorithms, OOP, databases, and web development.
         </p>
 
+        <!-- About me blurb -->
         <div class="mb12">
           <h3 style="margin:0 0 8px">About me</h3>
           <p class="muted" style="margin:0">
@@ -47,6 +61,7 @@
           </p>
         </div>
 
+        <!-- External profile links -->
         <div class="mb12">
           <h3 style="margin:0 0 8px">Quick links</h3>
           <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -57,6 +72,7 @@
           </div>
         </div>
 
+        <!-- Technical skills — id="skills" used as a nav anchor -->
         <div id="skills">
           <h3 style="margin:0 0 8px">Technical skills</h3>
           <div class="skills">
@@ -76,7 +92,7 @@
         </div>
       </div>
 
-      <!-- Sidebar profile card -->
+      <!-- Sidebar profile card: avatar, name, and quick action links -->
       <aside class="card profile-card fade-in">
         <div class="avatar"><img src="assets/headshot.JPG" alt="Headshot of Thomas Peters"></div>
         <div style="font-weight:700">Thomas Peters</div>
@@ -95,10 +111,15 @@
       </aside>
     </section>
 
-    <!-- Projects Section: responsive grid with two featured projects + link to all projects -->
+    <!-- Projects Section
+         id="projects" used as a nav anchor.
+         Three-column grid: two featured projects + link to the full listing.
+    -->
     <section id="projects" class="card fade-in">
       <h2 style="margin-top:0">Selected projects</h2>
       <div class="grid-3">
+
+        <!-- Featured project: Portfolio -->
         <a class="project-card" href="projects/portfolio.html">
           <h4 style="margin:0 0 8px">Portfolio Website</h4>
           <p class="muted" style="margin:0 0 8px">
@@ -107,6 +128,7 @@
           <span class="project-link">Open case study →</span>
         </a>
 
+        <!-- Featured project: Esports -->
         <a class="project-card" href="projects/esports.html">
           <h4 style="margin:0 0 8px">Esports website</h4>
           <p class="muted" style="margin:0 0 8px">
@@ -115,6 +137,7 @@
           <span class="project-link">Open case study →</span>
         </a>
 
+        <!-- Link to the full project listing -->
         <a class="project-card" href="projects/all-projects.html">
           <h4 style="margin:0 0 8px">My other projects</h4>
           <p class="muted" style="margin:0 0 8px">
@@ -125,16 +148,22 @@
       </div>
     </section>
 
-    <!-- Experience & Education Section with two responsive columns -->
+    <!-- Experience & Education Section
+         Two responsive columns: education on the left, work/volunteering on the right.
+    -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Experience & Education</h2>
       <div style="display:flex;gap:20px;flex-wrap:wrap">
+
+        <!-- Education column -->
         <div style="flex:1;min-width:260px">
           <h4 style="margin:0 0 6px">Education</h4>
           <p class="muted" style="margin:0">
             BSc Computer Science — Keele University (2022 - Present). Relevant modules: Algorithms, Software Engineering, Databases.
           </p>
         </div>
+
+        <!-- Work / Volunteering column -->
         <div style="flex:1;min-width:260px">
           <h4 style="margin:0 0 6px">Work / Volunteering</h4>
           <p class="muted" style="margin:0">
@@ -144,7 +173,10 @@
       </div>
     </section>
 
-    <!-- Contact Section with direct links and contact details -->
+    <!-- Contact Section
+         id="contact" used as a nav anchor.
+         Direct contact details with mailto and external profile links.
+    -->
     <section id="contact" class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Contact</h2>
       <p class="muted">Interested in offering a placement or want to chat? Send an email or connect on LinkedIn.</p>
@@ -153,15 +185,17 @@
       <p style="margin:6px 0">🔗 <a href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank">linkedin.com/in/thomas-peters</a></p>
     </section>
 
+    <!-- Footer -->
     <footer class="fade-in">
       <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
     </footer>
+
   </main>
 
-  <!-- Fade-in effects for cards and sections -->
+  <!-- Scroll-triggered fade-in animations -->
   <script src="script.js"></script>
   <script>
-    // Keep footer year current
+    // Keep the footer copyright year current automatically
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

@@ -6,10 +6,15 @@
   <title>Portfolio Website | Thomas Peters</title>
   <meta name="description" content="Case study for Thomas Peters' portfolio website: goals, stack, and outcomes.">
   <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
+  <!-- Global styles shared across the entire site -->
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <!-- Shared site header for consistent navigation -->
+
+  <!-- =====================================================================
+       Site Header
+       Identical across all pages for consistent navigation.
+  ====================================================================== -->
   <header>
     <div class="logo">
       <div class="mark">TP</div>
@@ -28,10 +33,18 @@
     </nav>
   </header>
 
-  <!-- Project case study content -->
+  <!-- =====================================================================
+       Page Content
+  ====================================================================== -->
   <main class="container">
-    <!-- Overview + quick navigation -->
+
+    <!-- Hero Card
+         Breadcrumb trail, project title, summary, CTA buttons, and snapshot panel.
+         Two-column on desktop, single column on mobile.
+    -->
     <section class="card fade-in">
+
+      <!-- Breadcrumb navigation -->
       <div class="breadcrumbs">
         <a href="../index.html">Home</a>
         <span>/</span>
@@ -40,6 +53,7 @@
         <span>Portfolio Website</span>
       </div>
 
+      <!-- Hero: title + description on the left, project snapshot panel on the right -->
       <div class="page-hero" style="margin-top:16px">
         <div>
           <h1 style="margin-top:0">Portfolio Website</h1>
@@ -47,11 +61,14 @@
             A polished, fast-loading personal site that presents my background, skills, and projects in a clear,
             recruiter-friendly format. Built to be responsive, accessible, and easy to expand as new work comes in.
           </p>
+          <!-- Primary CTA: repo link. Secondary: back to listing -->
           <div class="cta-row">
             <a class="btn" href="https://github.com/thomasPeters31/ThomasPeters" target="_blank" rel="noopener">View repo</a>
             <a class="outline" href="all-projects.html">Back to projects</a>
           </div>
         </div>
+
+        <!-- Snapshot panel: role, focus, and status at a glance -->
         <div class="detail-card">
           <h4 style="margin:0 0 10px">Project snapshot</h4>
           <p class="muted" style="margin:0 0 8px">Role: Designer + Developer</p>
@@ -61,6 +78,9 @@
       </div>
     </section>
 
+    <!-- Goals and Approach Section
+         Three detail cards covering design, performance, and maintainability.
+    -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Goals and approach</h2>
       <p class="muted">
@@ -84,6 +104,7 @@
       </div>
     </section>
 
+    <!-- Tech Stack Section -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Tech stack</h2>
       <div class="tag-list">
@@ -94,6 +115,7 @@
       </div>
     </section>
 
+    <!-- Outcome Section -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Outcome</h2>
       <p class="muted">
@@ -102,13 +124,17 @@
       </p>
     </section>
 
+    <!-- Footer -->
     <footer class="fade-in">
       <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
     </footer>
+
   </main>
 
+  <!-- Scroll-triggered fade-in animations -->
   <script src="../script.js"></script>
   <script>
+    // Keep the footer copyright year current automatically
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

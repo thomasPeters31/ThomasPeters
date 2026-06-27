@@ -6,9 +6,15 @@
   <title>CounsellingHQ | Thomas Peters</title>
   <meta name="description" content="Case study for CounsellingHQ — a client website for a counselling service, designed and developed by Thomas Peters.">
   <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
+  <!-- Global styles shared across the entire site -->
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+
+  <!-- =====================================================================
+       Site Header
+       Identical across all pages for consistent navigation.
+  ====================================================================== -->
   <header>
     <div class="logo">
       <div class="mark">TP</div>
@@ -27,8 +33,18 @@
     </nav>
   </header>
 
+  <!-- =====================================================================
+       Page Content
+  ====================================================================== -->
   <main class="container">
+
+    <!-- Hero Card
+         Breadcrumb trail, project title, summary, CTA buttons, and snapshot panel.
+         Two-column on desktop, single column on mobile.
+    -->
     <section class="card fade-in">
+
+      <!-- Breadcrumb navigation -->
       <div class="breadcrumbs">
         <a href="../index.html">Home</a>
         <span>/</span>
@@ -37,6 +53,7 @@
         <span>CounsellingHQ</span>
       </div>
 
+      <!-- Hero: title + description on the left, project snapshot panel on the right -->
       <div class="page-hero" style="margin-top:16px">
         <div>
           <h1 style="margin-top:0">CounsellingHQ</h1>
@@ -44,12 +61,15 @@
             A professional website built for a counselling service client, designed to be welcoming, clear,
             and easy to navigate for people seeking mental health support.
           </p>
+          <!-- Primary CTA: repo. Secondary: live site and back to listing -->
           <div class="cta-row">
             <a class="btn" href="https://github.com/thomasPeters31/therapyWebsite" target="_blank" rel="noopener">View repo</a>
             <a class="outline" href="https://counsellinghq.co.uk" target="_blank" rel="noopener">Visit live site</a>
             <a class="outline" href="all-projects.html">Back to projects</a>
           </div>
         </div>
+
+        <!-- Snapshot panel: role, focus, and status at a glance -->
         <div class="detail-card">
           <h4 style="margin:0 0 10px">Project snapshot</h4>
           <p class="muted" style="margin:0 0 8px">Role: Designer + Developer</p>
@@ -59,6 +79,9 @@
       </div>
     </section>
 
+    <!-- Goals and Approach Section
+         Three detail cards covering key features, design, and client collaboration.
+    -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Goals and approach</h2>
       <p class="muted">
@@ -82,32 +105,36 @@
       </div>
     </section>
 
+    <!-- Tech Stack Section -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Tech stack</h2>
       <div class="tag-list">
         <span class="tag">HTML</span>
         <span class="tag">CSS</span>
         <span class="tag">JavaScript</span>
-        <span class="tag">Live</span>
       </div>
     </section>
 
+    <!-- Outcome Section -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Outcome</h2>
       <p class="muted">
         The finished site gives the client a polished, professional web presence that serves their users well.
-        It is live at <a href="https://counsellinghq.co.uk" target="_blank" rel="noopener">counsellinghq.co.uk</a> and
-        demonstrates real-world experience delivering a complete website for a paying client.
+        It is live and demonstrates real-world experience delivering a complete website for a paying client.
       </p>
     </section>
 
+    <!-- Footer -->
     <footer class="fade-in">
       <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
     </footer>
+
   </main>
 
+  <!-- Scroll-triggered fade-in animations -->
   <script src="../script.js"></script>
   <script>
+    // Keep the footer copyright year current automatically
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

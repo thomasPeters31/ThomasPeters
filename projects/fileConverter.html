@@ -6,9 +6,15 @@
   <title>File Converter | Thomas Peters</title>
   <meta name="description" content="Case study for Thomas Peters' File Converter — a C# .NET desktop utility for converting files between formats.">
   <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
+  <!-- Global styles shared across the entire site -->
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+
+  <!-- =====================================================================
+       Site Header
+       Identical across all pages for consistent navigation.
+  ====================================================================== -->
   <header>
     <div class="logo">
       <div class="mark">TP</div>
@@ -27,8 +33,18 @@
     </nav>
   </header>
 
+  <!-- =====================================================================
+       Page Content
+  ====================================================================== -->
   <main class="container">
+
+    <!-- Hero Card
+         Breadcrumb trail, project title, summary, CTA buttons, and snapshot panel.
+         Two-column on desktop, single column on mobile.
+    -->
     <section class="card fade-in">
+
+      <!-- Breadcrumb navigation -->
       <div class="breadcrumbs">
         <a href="../index.html">Home</a>
         <span>/</span>
@@ -37,6 +53,7 @@
         <span>File Converter</span>
       </div>
 
+      <!-- Hero: title + description on the left, project snapshot panel on the right -->
       <div class="page-hero" style="margin-top:16px">
         <div>
           <h1 style="margin-top:0">File Converter</h1>
@@ -44,10 +61,13 @@
             A desktop utility built in C# and .NET that lets users convert files between common formats through
             a clean, straightforward interface. Built to explore application development outside of the web.
           </p>
+          <!-- No public repo — only a back link -->
           <div class="cta-row">
             <a class="outline" href="all-projects.html">Back to projects</a>
           </div>
         </div>
+
+        <!-- Snapshot panel: role, focus, and status at a glance -->
         <div class="detail-card">
           <h4 style="margin:0 0 10px">Project snapshot</h4>
           <p class="muted" style="margin:0 0 8px">Role: Developer</p>
@@ -57,6 +77,9 @@
       </div>
     </section>
 
+    <!-- Goals and Approach Section
+         Three detail cards covering key features, UI design, and learning outcomes.
+    -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Goals and approach</h2>
       <p class="muted">
@@ -80,6 +103,7 @@
       </div>
     </section>
 
+    <!-- Tech Stack Section -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Tech stack</h2>
       <div class="tag-list">
@@ -89,6 +113,7 @@
       </div>
     </section>
 
+    <!-- Outcome Section -->
     <section class="card fade-in" style="margin-top:18px">
       <h2 style="margin-top:0">Outcome</h2>
       <p class="muted">
@@ -98,13 +123,17 @@
       </p>
     </section>
 
+    <!-- Footer -->
     <footer class="fade-in">
       <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
     </footer>
+
   </main>
 
+  <!-- Scroll-triggered fade-in animations -->
   <script src="../script.js"></script>
   <script>
+    // Keep the footer copyright year current automatically
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>

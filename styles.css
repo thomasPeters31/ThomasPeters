@@ -1,4 +1,6 @@
-/* Theme variables */
+/* ==========================================================================
+   Theme Variables
+   ========================================================================== */
 :root {
   --accent: #38bdf8;
   --accent-strong: #22d3ee;
@@ -9,17 +11,26 @@
   --border: rgba(255,255,255,0.08);
 }
 
-/* Base reset */
+
+/* ==========================================================================
+   Base Reset
+   ========================================================================== */
 * {
   box-sizing: border-box;
 }
 
-/* Global styles */
+/* Prevent horizontal overflow from any overflowing child */
 html, body {
   max-width: 100%;
   overflow-x: hidden;
 }
 
+
+/* ==========================================================================
+   Body & Background
+   ========================================================================== */
+
+/* Radial accent glows at top corners + deep blue gradient base */
 body {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   margin: 0;
@@ -32,7 +43,7 @@ body {
   position: relative;
 }
 
-/* Glow accent on scroll; fixed so it stays put while content moves */
+/* Fullscreen top glow overlay — fixed so it stays in place while the page scrolls */
 body::before {
   content: "";
   position: fixed;
@@ -42,6 +53,10 @@ body::before {
   mix-blend-mode: screen;
 }
 
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
 a {
   color: var(--accent);
   text-decoration: none;
@@ -56,7 +71,39 @@ img {
   height: auto;
 }
 
-/* Header */
+p {
+  line-height: 1.7;
+}
+
+h1 {
+  font-size: 32px;
+  margin: 0 0 8px;
+}
+
+h2 {
+  font-size: 24px;
+  letter-spacing: -0.01em;
+}
+
+/* Subdued body copy used throughout for secondary text */
+.sub {
+  color: var(--muted);
+  margin: 0 0 18px;
+  line-height: 1.6;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.mb12 {
+  margin-bottom: 12px;
+}
+
+
+/* ==========================================================================
+   Layout — Header
+   ========================================================================== */
 header {
   display: flex;
   align-items: center;
@@ -72,12 +119,14 @@ header {
   backdrop-filter: blur(12px);
 }
 
+/* Logo: monogram mark + name/subtitle */
 .logo {
   display: flex;
   gap: 12px;
   align-items: center;
 }
 
+/* TP monogram badge */
 .logo .mark {
   width: 44px;
   height: 44px;
@@ -102,6 +151,56 @@ nav a {
   color: #dbeafe;
 }
 
+
+/* ==========================================================================
+   Layout — Page Container
+   ========================================================================== */
+.container {
+  max-width: 1200px;
+  margin: 20px auto 60px;
+  padding: 0 20px;
+}
+
+/* Two-column hero: main content left, profile card right */
+.hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) auto; /* sidebar sizes to its content on laptop */
+  gap: 28px;
+  align-items: center; /* vertically center main content and sidebar relative to each other */
+}
+
+section {
+  margin-top: 36px;
+}
+
+
+/* ==========================================================================
+   Cards
+   ========================================================================== */
+
+/* Primary content card — subtle gradient lifts it off the background */
+.card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 18px 50px rgba(2,6,23,0.6);
+  border: 1px solid var(--border);
+}
+
+/* Smaller info panels used within case study pages */
+.detail-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+
+/* ==========================================================================
+   Buttons & Links
+   ========================================================================== */
+
+/* Primary CTA — gradient fill with accent glow */
 .btn {
   background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: #041024;
@@ -112,45 +211,32 @@ nav a {
   box-shadow: 0 10px 24px rgba(56, 189, 248, 0.25);
 }
 
-.container {
-  max-width: 1200px;
-  margin: 20px auto 60px;
-  padding: 0 20px;
-}
-
-/* Hero layout */
-.hero {
-  display: grid;
-  grid-template-columns: minmax(280px, 1fr) auto; /* sidebar sizes to its content on laptop */
-  gap: 28px;
-  align-items: center; /* vertically center main content and sidebar relative to each other */
-}
-
-/* Card styles */
-.card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-  border-radius: 14px;
-  padding: 24px;
-  box-shadow: 0 18px 50px rgba(2,6,23,0.6);
+/* Secondary CTA — ghost button with hover lift */
+.outline {
   border: 1px solid var(--border);
+  padding: 8px 12px;
+  border-radius: 10px;
+  color: #dbeafe;
+  transition: border-color 0.2s ease, transform 0.2s ease;
 }
 
-h1 {
-  font-size: 32px;
-  margin: 0 0 8px;
+.outline:hover {
+  border-color: var(--accent);
+  transform: translateY(-1px);
 }
 
-h2 {
-  font-size: 24px;
-  letter-spacing: -0.01em;
+/* Horizontal row of CTA buttons on case study pages */
+.cta-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
-.sub {
-  color: var(--muted);
-  margin: 0 0 18px;
-  line-height: 1.6;
-}
 
+/* ==========================================================================
+   Skills
+   ========================================================================== */
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -158,7 +244,7 @@ h2 {
   margin-top: 6px;
 }
 
-/* Skill pill */
+/* Individual skill pill */
 .chip {
   background: var(--glass);
   padding: 8px 10px;
@@ -168,6 +254,10 @@ h2 {
   border: 1px solid rgba(255,255,255,0.08);
 }
 
+
+/* ==========================================================================
+   Profile Card (Sidebar)
+   ========================================================================== */
 .profile-card {
   padding: 20px;
   text-align: center;
@@ -175,17 +265,17 @@ h2 {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  align-self: center; /* center vertically in the grid row */
-  justify-self: start; /* align with the start of the adjacent container on laptop */
+  align-self: center;     /* center vertically in the grid row */
+  justify-self: start;    /* align with the start of the adjacent container on laptop */
   gap: 4px;
   width: fit-content;
   min-width: 280px;
   max-width: 340px;
-  height: fit-content; /* hug contents so there are no empty areas */
-  margin: 0; /* prevent centering so it lines up with the main column */
+  height: fit-content;    /* hug contents so there are no empty areas */
+  margin: 0;              /* prevent centering so it lines up with the main column */
 }
 
-/* Circular avatar container */
+/* Circular avatar container with subtle border */
 .avatar {
   width: 120px;
   height: 120px;
@@ -198,7 +288,7 @@ h2 {
   flex-shrink: 0;
 }
 
-/* Image inside avatar */
+/* Centered crop — covers the circular container regardless of image dimensions */
 .avatar img {
   position: absolute;
   top: 50%;
@@ -217,44 +307,31 @@ h2 {
   margin-top: 8px;
 }
 
-p {
-  line-height: 1.7;
-}
-
-/* Link rows inside profile card for tidy grouping */
+/* Paired link buttons inside the profile card */
 .link-row {
   display: flex;
   gap: 8px;
   justify-content: center;
 }
 
-.outline {
-  border: 1px solid var(--border);
-  padding: 8px 12px;
-  border-radius: 10px;
-  color: #dbeafe;
-  transition: border-color 0.2s ease, transform 0.2s ease;
-}
 
-.outline:hover {
-  border-color: var(--accent);
-  transform: translateY(-1px);
-}
+/* ==========================================================================
+   Project Grid & Cards
+   ========================================================================== */
 
-section {
-  margin-top: 36px;
-}
-
+/* Three-column responsive grid — collapses to fewer columns on narrow viewports */
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 18px;
 }
 
+/* Single-column override for the all-projects listing */
 .project-column {
   grid-template-columns: 1fr;
 }
 
+/* Section header row with title on the left and a secondary action on the right */
 .section-head {
   display: flex;
   align-items: center;
@@ -267,7 +344,7 @@ section {
   margin-top: 14px;
 }
 
-/* Project cards */
+/* Clickable project card with hover lift effect */
 .project-card {
   padding: 16px;
   border-radius: 12px;
@@ -292,6 +369,7 @@ section {
   box-shadow: 0 18px 36px rgba(2,6,23,0.5);
 }
 
+/* Keyboard focus ring for accessibility */
 .project-card:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 3px;
@@ -303,6 +381,7 @@ section {
   gap: 12px;
 }
 
+/* Horizontal project row used in list views */
 .project-row {
   display: flex;
   align-items: flex-start;
@@ -334,62 +413,12 @@ section {
   align-self: center;
 }
 
-footer {
-  margin: 50px 0 80px;
-  text-align: center;
-  color: var(--muted);
-  border-top: 1px solid rgba(255,255,255,0.05);
-  padding-top: 18px;
-}
 
-.muted {
-  color: var(--muted);
-}
+/* ==========================================================================
+   Tags
+   ========================================================================== */
 
-.mb12 {
-  margin-bottom: 12px;
-}
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(12px);
-  transition: opacity 0.4s ease, transform 0.4s ease;
-}
-
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Project detail pages */
-.breadcrumbs {
-  display: inline-flex;
-  gap: 8px;
-  align-items: center;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-.page-hero {
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
-  gap: 18px;
-  align-items: center;
-}
-
-.detail-card {
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), transparent);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.detail-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 14px;
-}
-
+/* Pill tags for tech stack labels on case study pages */
 .tag-list {
   display: flex;
   flex-wrap: wrap;
@@ -405,13 +434,39 @@ footer {
   color: #dbeafe;
 }
 
-.cta-row {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
+
+/* ==========================================================================
+   Case Study Pages
+   ========================================================================== */
+
+/* Breadcrumb trail: Home / All projects / Project name */
+.breadcrumbs {
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Two-column hero: description + CTA on the left, snapshot panel on the right */
+.page-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(240px, 0.8fr);
+  gap: 18px;
   align-items: center;
 }
 
+/* Three-column detail grid beneath the hero description */
+.detail-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
 input, textarea {
   width: 100%;
   padding: 10px;
@@ -422,8 +477,42 @@ input, textarea {
   margin-bottom: 8px;
 }
 
-/* Responsive Design */
+
+/* ==========================================================================
+   Animations
+   ========================================================================== */
+
+/* Initial state — elements start invisible and slightly below position */
+.fade-in {
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+/* Applied by IntersectionObserver in script.js when element enters the viewport */
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+footer {
+  margin: 50px 0 80px;
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid rgba(255,255,255,0.05);
+  padding-top: 18px;
+}
+
+
+/* ==========================================================================
+   Responsive — Tablet (≤ 900px)
+   ========================================================================== */
 @media (max-width: 900px) {
+  /* Stack header vertically */
   header {
     flex-direction: column;
     align-items: flex-start;
@@ -437,6 +526,7 @@ input, textarea {
     flex-direction: column;
   }
 
+  /* Hero drops to single column, profile card moves above content */
   .hero {
     grid-template-columns: 1fr;
   }
@@ -447,11 +537,16 @@ input, textarea {
     margin: 0 auto;
   }
 
+  /* Case study hero also collapses to single column */
   .page-hero {
     grid-template-columns: 1fr;
   }
 }
 
+
+/* ==========================================================================
+   Responsive — Small Mobile (≤ 560px)
+   ========================================================================== */
 @media (max-width: 560px) {
   body {
     font-size: 15px;
@@ -465,6 +560,7 @@ input, textarea {
     font-size: 24px;
   }
 
+  /* Stack link pairs vertically and stretch to full width */
   .link-row {
     flex-direction: column;
   }
@@ -474,6 +570,7 @@ input, textarea {
     text-align: center;
   }
 
+  /* Project rows stack content above CTA on small screens */
   .project-row {
     flex-direction: column;
     align-items: stretch;
@@ -484,7 +581,12 @@ input, textarea {
   }
 }
 
+
+/* ==========================================================================
+   Responsive — Narrow Mobile (≤ 780px)
+   ========================================================================== */
 @media (max-width: 780px) {
+  /* Full-width nav links */
   nav a {
     width: 100%;
     text-align: center;
@@ -495,6 +597,7 @@ input, textarea {
     width: 100%;
   }
 
+  /* Hide the header entirely on very small screens */
   header {
     display: none;
   }
