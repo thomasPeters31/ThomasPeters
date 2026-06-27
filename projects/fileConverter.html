@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Converter | Thomas Peters</title>
+  <meta name="description" content="Case study for Thomas Peters' File Converter — a C# .NET desktop utility for converting files between formats.">
+  <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <div class="mark">TP</div>
+      <div>
+        <div style="font-weight:700">Thomas Peters</div>
+        <div class="muted" style="font-size:13px">
+          Aspiring Software Engineer | Computer Science Student at Keele University
+        </div>
+      </div>
+    </div>
+    <nav id="site-nav">
+      <a class="outline" href="../index.html#projects">Projects</a>
+      <a class="outline" href="../index.html#skills">Skills</a>
+      <a class="outline" href="../index.html#contact">Contact</a>
+      <a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card fade-in">
+      <div class="breadcrumbs">
+        <a href="../index.html">Home</a>
+        <span>/</span>
+        <a href="all-projects.html">All projects</a>
+        <span>/</span>
+        <span>File Converter</span>
+      </div>
+
+      <div class="page-hero" style="margin-top:16px">
+        <div>
+          <h1 style="margin-top:0">File Converter</h1>
+          <p class="sub">
+            A desktop utility built in C# and .NET that lets users convert files between common formats through
+            a clean, straightforward interface. Built to explore application development outside of the web.
+          </p>
+          <div class="cta-row">
+            <a class="outline" href="all-projects.html">Back to projects</a>
+          </div>
+        </div>
+        <div class="detail-card">
+          <h4 style="margin:0 0 10px">Project snapshot</h4>
+          <p class="muted" style="margin:0 0 8px">Role: Developer</p>
+          <p class="muted" style="margin:0 0 8px">Focus: Desktop utility, file handling, UI</p>
+          <p class="muted" style="margin:0">Status: Completed</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card fade-in" style="margin-top:18px">
+      <h2 style="margin-top:0">Goals and approach</h2>
+      <p class="muted">
+        The goal was to build a practical desktop tool that handles file format conversion reliably, while keeping
+        the interface simple enough for any user to pick up immediately. This project pushed me into C# and .NET
+        application development beyond the browser, covering file I/O, event-driven UI, and error handling.
+      </p>
+      <div class="detail-grid" style="margin-top:14px">
+        <div class="detail-card">
+          <h4 style="margin:0 0 8px">Key features</h4>
+          <p class="muted" style="margin:0">File selection, format conversion between supported types, and clear feedback on success or failure.</p>
+        </div>
+        <div class="detail-card">
+          <h4 style="margin:0 0 8px">User interface</h4>
+          <p class="muted" style="margin:0">Clean, minimal UI built to keep the user focused on the task — pick a file, pick a format, convert.</p>
+        </div>
+        <div class="detail-card">
+          <h4 style="margin:0 0 8px">What I learned</h4>
+          <p class="muted" style="margin:0">Practical experience with C# file handling, .NET desktop application structure, and building event-driven UIs.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card fade-in" style="margin-top:18px">
+      <h2 style="margin-top:0">Tech stack</h2>
+      <div class="tag-list">
+        <span class="tag">C#</span>
+        <span class="tag">.NET</span>
+        <span class="tag">Desktop UI</span>
+      </div>
+    </section>
+
+    <section class="card fade-in" style="margin-top:18px">
+      <h2 style="margin-top:0">Outcome</h2>
+      <p class="muted">
+        A working desktop utility that demonstrates practical C# and .NET skills. Building outside of the web
+        stack gave me a broader perspective on application architecture and strengthened my understanding of
+        typed, compiled languages.
+      </p>
+    </section>
+
+    <footer class="fade-in">
+      <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
+    </footer>
+  </main>
+
+  <script src="../script.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
