@@ -43,7 +43,16 @@ if (prefersReducedMotion) {
     },
     { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
   );
-  faders.forEach((el) => appearOnScroll.observe(el));
+
+  faders.forEach((el) => {
+    const rect = el.getBoundingClientRect();
+    // Already in the viewport on load — make visible immediately so there's no flash
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('visible');
+    } else {
+      appearOnScroll.observe(el);
+    }
+  });
 }
 
 // ---------------------------------------------------------------------------
