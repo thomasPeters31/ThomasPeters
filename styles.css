@@ -754,19 +754,40 @@ section:first-of-type {
     display: flex;
   }
 
+  /* 2×2 grid so facts stay compact and don't stack into a long column */
   .fact-strip {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-direction: unset;
   }
 
   .fact {
     border-left: none;
     border-top: 1px solid var(--line);
-    padding: 16px 0;
+    padding: 12px 0;
   }
 
-  .fact:first-child {
+  .fact:nth-child(odd) {
+    border-right: 1px solid var(--line);
+    padding-right: 16px;
+  }
+
+  .fact:nth-child(even) {
+    padding-left: 16px;
+  }
+
+  .fact:first-child,
+  .fact:nth-child(2) {
     border-top: none;
     padding-top: 0;
+  }
+
+  .fact .num {
+    font-size: 18px;
+  }
+
+  .fact .label {
+    font-size: 12px;
   }
 }
 
