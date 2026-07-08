@@ -3,200 +3,358 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Thomas Peters — Portfolio</title>
-  <meta name="description" content="Portfolio and CV site for Thomas Peters, Computer Science student at Keele University seeking placement year.">
-  <link rel="icon" type="image/jpg" href="assets/headshot.JPG">
-  <!-- Global styles: layout, theme variables, animations, and responsive rules -->
+  <title>Thomas Peters — Software Engineering Student & Developer</title>
+  <meta name="description" content="Thomas Peters is a Computer Science undergraduate at Keele University seeking a placement year in software engineering, data science, or backend development.">
+  <link rel="canonical" href="https://www.thomas-peters.org/">
+
+  <!-- Open Graph / Twitter card previews for social shares and link unfurls -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Thomas Peters — Software Engineering Student & Developer">
+  <meta property="og:description" content="Computer Science undergraduate at Keele University seeking a placement year in software engineering, data science, or backend development.">
+  <meta property="og:url" content="https://www.thomas-peters.org/">
+  <meta property="og:image" content="https://www.thomas-peters.org/assets/headshot.jpg">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Thomas Peters — Software Engineering Student & Developer">
+  <meta name="twitter:description" content="Computer Science undergraduate at Keele University seeking a placement year in software engineering, data science, or backend development.">
+  <meta name="twitter:image" content="https://www.thomas-peters.org/assets/headshot.jpg">
+
+  <!-- Browser chrome colour (mobile address bar) + tab icon -->
+  <meta name="theme-color" content="#121214">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+
+  <!-- Google Fonts: Fraunces for display headings, Inter for body text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Structured data so search engines can show a Person rich result -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Thomas Peters",
+    "url": "https://www.thomas-peters.org/",
+    "image": "https://www.thomas-peters.org/assets/headshot.jpg",
+    "jobTitle": "Computer Science Student",
+    "alumniOf": {
+      "@type": "CollegeOrUniversity",
+      "name": "Keele University"
+    },
+    "sameAs": [
+      "https://github.com/thomasPeters31",
+      "https://www.linkedin.com/in/thomas-peters-69949b268/"
+    ]
+  }
+  </script>
 </head>
 <body>
 
+  <!-- Lets keyboard/screen-reader users jump past the nav; only visible on focus -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
   <!-- =====================================================================
-       Site Header
-       Logo mark on the left, primary navigation links on the right.
-       Hides on narrow mobile screens via CSS.
+       Site header — sticky nav bar.
+       Links target section ids further down the page (#about, #experience,
+       etc). Below 860px the <ul class="nav-links"> becomes a fixed dropdown
+       toggled by the hamburger button; script.js wires up the open/close.
   ====================================================================== -->
-  <header>
-    <div class="logo">
-      <div class="mark">TP</div>
-      <div>
-        <div style="font-weight:700">Thomas Peters</div>
-        <div class="muted" style="font-size:13px">
-          Aspiring Software Engineer | Computer Science Student at Keele University
-        </div>
-      </div>
+  <header class="site-header">
+    <div class="nav-row">
+      <a class="brand" href="#top">
+        <span class="mark">TP</span>
+        Thomas Peters
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="assets/CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+      <!-- Only shown below the 860px breakpoint (see styles.css) -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
-    <nav id="site-nav">
-      <a class="outline" href="#projects">Projects</a>
-      <a class="outline" href="#skills">Skills</a>
-      <a class="outline" href="#contact">Contact</a>
-      <a class="btn" href="assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
-    </nav>
   </header>
 
-  <!-- =====================================================================
-       Page Content
-       Max-width container with consistent padding across all viewports.
-  ====================================================================== -->
-  <main class="container">
+  <main id="main">
 
-    <!-- Hero Section
-         Two-column layout: intro/skills card on the left, profile card on the right.
-         Collapses to a single column on tablet and below.
-    -->
-    <section class="hero fade-in">
-
-      <!-- Main intro card: tagline, about, quick links, and technical skills -->
-      <div class="card fade-in">
-        <h1>Thomas Peters</h1>
-        <p class="sub">
-          Computer Science undergraduate at <strong>Keele University</strong> — seeking a placement year in software engineering, data science or backend development. Strong foundations in algorithms, OOP, databases, and web development.
-        </p>
-
-        <!-- About me blurb -->
-        <div class="mb12">
-          <h3 style="margin:0 0 8px">About me</h3>
-          <p class="muted" style="margin:0">
-            I enjoy building practical applications, learning new technologies, and collaborating with teams on real-world problems. Currently exploring cloud services, containerisation, and scalable APIs.
-          </p>
-        </div>
-
-        <!-- External profile links -->
-        <div class="mb12">
-          <h3 style="margin:0 0 8px">Quick links</h3>
-          <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <a class="outline" href="https://github.com/thomasPeters31" target="_blank">GitHub</a>
-            <a class="outline" href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank">LinkedIn</a>
-            <a class="outline" href="assets/CV.pdf" target="_blank">CV (PDF)</a>
-            <a class="outline" href="mailto:t.peters.31@outlook.com">Email me</a>
+    <!-- =====================================================================
+         Hero
+         Intro copy + CTA buttons on the left, portrait on the right; both
+         collapse to a single column on mobile (photo moves above the text).
+         The fact-strip below is a quick-glance summary row.
+    ====================================================================== -->
+    <section class="hero" id="top" style="border-top:none">
+      <div class="wrap">
+        <div class="hero-grid">
+          <div class="fade-in">
+            <span class="eyebrow">Computer Science, Keele University</span>
+            <h1>Thomas Peters</h1>
+            <p class="role">Aspiring software engineer — seeking a placement year</p>
+            <p class="lede">
+              I build practical applications, learn new technologies quickly, and enjoy collaborating on
+              real-world problems. Strong foundations in algorithms, OOP, databases and web development, with
+              growing interest in cloud services, containerisation, and scalable APIs.
+            </p>
+            <div class="btn-row">
+              <a class="btn" href="#projects">View my projects</a>
+              <a class="btn-outline" href="#contact">Get in touch</a>
+            </div>
+          </div>
+          <!-- Framed portrait; the offset border is a pure CSS ::before, no extra image -->
+          <div class="hero-photo fade-in">
+            <div class="frame">
+              <img src="assets/headshot.jpg" alt="Portrait of Thomas Peters" width="640" height="428">
+            </div>
           </div>
         </div>
 
-        <!-- Technical skills — id="skills" used as a nav anchor -->
-        <div id="skills">
-          <h3 style="margin:0 0 8px">Technical skills</h3>
-          <div class="skills">
-            <div class="chip">Python</div>
-            <div class="chip">Java</div>
-            <div class="chip">C#</div>
-            <div class="chip">Avalonia UI</div>
-            <div class="chip">.NET</div>
-            <div class="chip">XAML</div>
-            <div class="chip">OOP</div>
-            <div class="chip">HTML</div>
-            <div class="chip">JavaScript</div>
-            <div class="chip">CSS</div>
-            <div class="chip">SQL</div>
-            <div class="chip">Git (learning)</div>
+        <!-- Quick facts, divided by thin rules; stacks to full-width rows on mobile -->
+        <div class="fact-strip fade-in">
+          <div class="fact">
+            <span class="num">2022–Present</span>
+            <span class="label">BSc Computer Science, Keele University</span>
+          </div>
+          <div class="fact">
+            <span class="num">4</span>
+            <span class="label">Projects shipped — personal, team &amp; client work</span>
+          </div>
+          <div class="fact">
+            <span class="num">2</span>
+            <span class="label">Live sites currently in production</span>
+          </div>
+          <div class="fact">
+            <span class="num">2026/27</span>
+            <span class="label">Placement year — actively seeking</span>
           </div>
         </div>
       </div>
-
-      <!-- Sidebar profile card: avatar, name, and quick action links -->
-      <aside class="card profile-card fade-in">
-        <div class="avatar"><img src="assets/headshot.JPG" alt="Headshot of Thomas Peters"></div>
-        <div style="font-weight:700">Thomas Peters</div>
-        <div class="muted" style="font-size:13px">BSc Computer Science — Keele University</div>
-
-        <div class="links">
-          <div class="link-row">
-            <a class="outline" href="assets/CV.pdf" target="_blank">Download CV</a>
-            <a class="outline" href="https://github.com/thomasPeters31" target="_blank">GitHub</a>
-          </div>
-          <div class="link-row">
-            <a class="outline" href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank">LinkedIn</a>
-            <a class="outline" href="mailto:t.peters.31@outlook.com">Email</a>
-          </div>
-        </div>
-      </aside>
     </section>
 
-    <!-- Projects Section
-         id="projects" used as a nav anchor.
-         Three-column grid: two featured projects + link to the full listing.
-    -->
-    <section id="projects" class="card fade-in">
-      <h2 style="margin-top:0">Selected projects</h2>
-      <div class="grid-3">
-
-        <!-- Featured project: Portfolio -->
-        <a class="project-card" href="projects/portfolio.html">
-          <h4 style="margin:0 0 8px">Portfolio Website</h4>
-          <p class="muted" style="margin:0 0 8px">
-            A personal website made with HTML/CSS/JS to showcase projects and CV. Hosted on GitHub Pages.
-          </p>
-          <span class="project-link">Open case study →</span>
-        </a>
-
-        <!-- Featured project: Esports -->
-        <a class="project-card" href="projects/esports.html">
-          <h4 style="margin:0 0 8px">Esports website</h4>
-          <p class="muted" style="margin:0 0 8px">
-            Designed and developed a modern website for a friend's esports team, featuring team profiles, match updates, and a sleek, competitive aesthetic. <strong>(In development)</strong>
-          </p>
-          <span class="project-link">Open case study →</span>
-        </a>
-
-        <!-- Link to the full project listing -->
-        <a class="project-card" href="projects/all-projects.html">
-          <h4 style="margin:0 0 8px">My other projects</h4>
-          <p class="muted" style="margin:0 0 8px">
-            A full list of the other projects I have created so far.
-          </p>
-          <span class="project-link">View all projects →</span>
-        </a>
-      </div>
-    </section>
-
-    <!-- Experience & Education Section
-         Two responsive columns: education on the left, work/volunteering on the right.
-    -->
-    <section class="card fade-in" style="margin-top:18px">
-      <h2 style="margin-top:0">Experience & Education</h2>
-      <div style="display:flex;gap:20px;flex-wrap:wrap">
-
-        <!-- Education column -->
-        <div style="flex:1;min-width:260px">
-          <h4 style="margin:0 0 6px">Education</h4>
-          <p class="muted" style="margin:0">
-            BSc Computer Science — Keele University (2022 - Present). Relevant modules: Algorithms, Software Engineering, Databases.
-          </p>
+    <!-- =====================================================================
+         About & skills
+         id="about" is a nav anchor. Two columns: bio on the left, skills
+         grouped into labelled clusters on the right.
+    ====================================================================== -->
+    <section id="about">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>About &amp; skills</h2>
         </div>
-
-        <!-- Work / Volunteering column -->
-        <div style="flex:1;min-width:260px">
-          <h4 style="margin:0 0 6px">Work / Volunteering</h4>
-          <p class="muted" style="margin:0">
-            Web dev at Yokai Esports — Planned, tested and made their current website. Still on call if they want to update the site. [Sept 2025 - Present]
-          </p>
+        <div class="about-grid">
+          <div class="fade-in">
+            <p>
+              I'm a Computer Science undergraduate at Keele University, currently looking for a placement year in
+              software engineering, data science, or backend development. I enjoy building practical applications,
+              picking up new technologies, and working with teams to solve real problems.
+            </p>
+            <p>
+              Outside of coursework, I've built and maintained live websites for a client and a team, alongside
+              personal projects that push into desktop application development. I'm currently exploring cloud
+              services, containerisation, and how to design APIs that scale.
+            </p>
+          </div>
+          <div class="fade-in">
+            <div class="skill-group">
+              <h4>Languages &amp; fundamentals</h4>
+              <div class="tag-list">
+                <span class="tag">Python</span>
+                <span class="tag">Java</span>
+                <span class="tag">C#</span>
+                <span class="tag">SQL</span>
+                <span class="tag">OOP</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Web</h4>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Frameworks &amp; platforms</h4>
+              <div class="tag-list">
+                <span class="tag">.NET</span>
+                <span class="tag">Avalonia UI</span>
+                <span class="tag">XAML</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h4>Currently learning</h4>
+              <div class="tag-list">
+                <span class="tag">Git</span>
+                <span class="tag">Cloud services</span>
+                <span class="tag">Containerisation</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Contact Section
-         id="contact" used as a nav anchor.
-         Direct contact details with mailto and external profile links.
-    -->
-    <section id="contact" class="card fade-in" style="margin-top:18px">
-      <h2 style="margin-top:0">Contact</h2>
-      <p class="muted">Interested in offering a placement or want to chat? Send an email or connect on LinkedIn.</p>
-      <p style="margin:6px 0">📞 +44 7803 008698</p>
-      <p style="margin:6px 0">📧 <a href="mailto:t.peters.31@outlook.com">t.peters.31@outlook.com</a></p>
-      <p style="margin:6px 0">🔗 <a href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank">linkedin.com/in/thomas-peters</a></p>
+    <!-- =====================================================================
+         Experience & education
+         id="experience" is a nav anchor. Reverse-chronological timeline;
+         each entry's dot/rail is drawn with CSS (.timeline-item::before).
+    ====================================================================== -->
+    <section id="experience">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Experience &amp; education</h2>
+        </div>
+        <div class="timeline fade-in">
+          <div class="timeline-item">
+            <span class="when">September 2025 — Present</span>
+            <h3>Web Developer, Yokai Esports</h3>
+            <p>Planned, built, and tested the team's current website, and remain on call for ongoing updates.</p>
+          </div>
+          <div class="timeline-item">
+            <span class="when">2022 — Present</span>
+            <h3>BSc Computer Science, Keele University</h3>
+            <p>Relevant modules: Algorithms, Software Engineering, Databases.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="fade-in">
-      <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
-    </footer>
+    <!-- =====================================================================
+         Selected projects
+         id="projects" is a nav anchor. Shows the 3 strongest projects as
+         full-width linked rows; "View all projects" leads to the complete
+         list in projects/all-projects.html.
+    ====================================================================== -->
+    <section id="projects">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Selected projects</h2>
+          <a class="see-all" href="projects/all-projects.html">View all projects →</a>
+        </div>
+        <div class="project-list">
+          <a class="project-row fade-in" href="projects/counsellinghq.html">
+            <div>
+              <div class="title-row">
+                <h3>CounsellingHQ</h3>
+                <span class="status-pill">Live</span>
+              </div>
+              <p>A professional website built for a counselling service client — calm, welcoming, and easy to navigate.</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="project-row fade-in" href="projects/esports.html">
+            <div>
+              <div class="title-row">
+                <h3>Esports Website — Yokai</h3>
+                <span class="status-pill">In development</span>
+              </div>
+              <p>A modern, competitive website for an esports team, with team profiles and match updates.</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+          <a class="project-row fade-in" href="projects/portfolio.html">
+            <div>
+              <div class="title-row">
+                <h3>Portfolio Website</h3>
+                <span class="status-pill">Live</span>
+              </div>
+              <p>This site — a fast, recruiter-friendly personal site with individual case studies for each project.</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Contact
+         id="contact" is a nav anchor. The email link starts with no real
+         href/text — data-email-user/domain hold the address reversed
+         character-by-character so plain-text scrapers can't lift it
+         straight from the HTML. script.js rebuilds and fills in the real
+         mailto: link and visible text at runtime.
+    ====================================================================== -->
+    <section id="contact">
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Contact</h2>
+        </div>
+        <div class="contact-grid">
+          <div class="fade-in">
+            <p>Interested in offering a placement, or want to chat about a project? I'd love to hear from you.</p>
+            <div class="contact-list">
+              <div>
+                <span class="k">Email</span>
+                <a href="#" data-email-user="13.sretep.t" data-email-domain="moc.kooltuo">Loading…</a>
+              </div>
+              <div>
+                <span class="k">Phone</span>
+                <a href="tel:+447803008698">+44 7803 008698</a>
+              </div>
+              <div>
+                <span class="k">LinkedIn</span>
+                <a href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank" rel="noopener">linkedin.com/in/thomas-peters</a>
+              </div>
+              <div>
+                <span class="k">GitHub</span>
+                <a href="https://github.com/thomasPeters31" target="_blank" rel="noopener">github.com/thomasPeters31</a>
+              </div>
+            </div>
+          </div>
+          <!-- Reuses the same .snapshot component as the project case study pages -->
+          <div class="snapshot fade-in">
+            <h4>Currently</h4>
+            <dl>
+              <div>
+                <dt>Looking for</dt>
+                <dd>Placement year, 2026/27</dd>
+              </div>
+              <div>
+                <dt>Interested in</dt>
+                <dd>Software engineering, data science, backend</dd>
+              </div>
+              <div>
+                <dt>Based</dt>
+                <dd>United Kingdom</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main>
 
-  <!-- Scroll-triggered fade-in animations -->
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <!-- #year is filled in by script.js so the copyright date never goes stale -->
+      <div>Made by Thomas Peters — © <span id="year"></span></div>
+      <div class="footer-links">
+        <a href="https://github.com/thomasPeters31" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
-  <script>
-    // Keep the footer copyright year current automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

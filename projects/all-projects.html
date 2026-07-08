@@ -5,129 +5,132 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Projects | Thomas Peters</title>
   <meta name="description" content="Full list of Thomas Peters' software projects.">
-  <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
-  <!-- Global styles shared across the entire site -->
+  <link rel="canonical" href="https://www.thomas-peters.org/projects/all-projects.html">
+  <meta name="theme-color" content="#121214">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-  <!-- =====================================================================
-       Site Header
-       Identical across all pages for consistent navigation.
-  ====================================================================== -->
-  <header>
-    <div class="logo">
-      <div class="mark">TP</div>
-      <div>
-        <div style="font-weight:700">Thomas Peters</div>
-        <div class="muted" style="font-size:13px">
-          Aspiring Software Engineer | Computer Science Student at Keele University
-        </div>
-      </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-row">
+      <a class="brand" href="../index.html">
+        <span class="mark">TP</span>
+        Thomas Peters
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
-    <nav id="site-nav">
-      <a class="outline" href="../index.html#projects">Projects</a>
-      <a class="outline" href="../index.html#skills">Skills</a>
-      <a class="outline" href="../index.html#contact">Contact</a>
-      <a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
-    </nav>
   </header>
 
-  <!-- =====================================================================
-       Page Content
-  ====================================================================== -->
-  <main class="container">
+  <main id="main">
+    <section style="border-top:none">
+      <div class="wrap">
+        <div class="breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>All projects</span>
+        </div>
 
-    <!-- Project Listing Card
-         Single-column grid of all projects, each linking to its case study.
-    -->
-    <section class="card fade-in">
+        <div class="section-head">
+          <h1 style="font-size:36px; margin:0;">All projects</h1>
+          <a class="see-all" href="../index.html#projects">← Back to selected projects</a>
+        </div>
+        <p class="lede" style="margin-bottom: 0;">A complete list of my projects. Each entry links to its case study.</p>
 
-      <!-- Breadcrumb navigation -->
-      <div class="breadcrumbs">
-        <a href="../index.html">Home</a>
-        <span>/</span>
-        <span>All projects</span>
-      </div>
+        <div class="project-list" style="margin-top: 16px;">
+          <a class="project-row fade-in" href="counsellinghq.html">
+            <div>
+              <div class="title-row">
+                <h3>CounsellingHQ</h3>
+                <span class="status-pill">Live</span>
+              </div>
+              <p>Professional website built for a counselling service client, designed to be welcoming and easy to navigate.</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
 
-      <!-- Page heading and back link -->
-      <div class="section-head" style="margin-top:16px">
-        <h1 style="margin:0">All projects</h1>
-        <a class="outline" href="../index.html#projects">Back to selected projects</a>
-      </div>
+          <a class="project-row fade-in" href="esports.html">
+            <div>
+              <div class="title-row">
+                <h3>Esports Website</h3>
+                <span class="status-pill">In development</span>
+              </div>
+              <p>Modern site for a competitive esports team with team profiles and match updates.</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
 
-      <p class="sub" style="margin-top:10px">
-        A complete list of my projects. Each entry links to its case study or project page.
-      </p>
+          <a class="project-row fade-in" href="portfolio.html">
+            <div>
+              <div class="title-row">
+                <h3>Portfolio Website</h3>
+                <span class="status-pill">Live</span>
+              </div>
+              <p>Personal website built with HTML, CSS, and JS to present projects and CV.</p>
+              <div class="tag-list">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+              </div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
 
-      <!-- Project cards — single column via .project-column override -->
-      <div class="grid-3 project-column">
-
-        <!-- Portfolio Website -->
-        <a class="project-card" href="portfolio.html">
-          <h4 style="margin:0 0 8px">Portfolio Website</h4>
-          <p class="muted" style="margin:0 0 8px">Personal website built with HTML, CSS, and JS to present projects and CV.</p>
-          <div class="tag-list" style="margin-bottom:8px">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Live</span>
-          </div>
-          <span class="project-link">Open case study →</span>
-        </a>
-
-        <!-- Esports Website -->
-        <a class="project-card" href="esports.html">
-          <h4 style="margin:0 0 8px">Esports Website</h4>
-          <p class="muted" style="margin:0 0 8px">Modern site for a competitive esports team with team profiles and match updates.</p>
-          <div class="tag-list" style="margin-bottom:8px">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">In development</span>
-          </div>
-          <span class="project-link">Open case study →</span>
-        </a>
-
-        <!-- File Converter -->
-        <a class="project-card" href="fileConverter.html">
-          <h4 style="margin:0 0 8px">File Converter</h4>
-          <p class="muted" style="margin:0 0 8px">Utility project focused on converting files between formats with a clean interface.</p>
-          <div class="tag-list" style="margin-bottom:8px">
-            <span class="tag">C#</span>
-            <span class="tag">.NET</span>
-            <span class="tag">UI</span>
-          </div>
-          <span class="project-link">Open case study →</span>
-        </a>
-
-        <!-- CounsellingHQ — client website -->
-        <a class="project-card" href="counsellinghq.html">
-          <h4 style="margin:0 0 8px">CounsellingHQ</h4>
-          <p class="muted" style="margin:0 0 8px">Professional website built for a counselling service client, designed to be welcoming and easy to navigate.</p>
-          <div class="tag-list" style="margin-bottom:8px">
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Live</span>
-          </div>
-          <span class="project-link">Open case study →</span>
-        </a>
+          <a class="project-row fade-in" href="fileConverter.html">
+            <div>
+              <div class="title-row">
+                <h3>File Converter</h3>
+                <span class="status-pill">Completed</span>
+              </div>
+              <p>Utility project focused on converting files between formats with a clean interface.</p>
+              <div class="tag-list">
+                <span class="tag">C#</span>
+                <span class="tag">.NET</span>
+                <span class="tag">UI</span>
+              </div>
+            </div>
+            <span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
       </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="fade-in">
-      <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
-    </footer>
-
   </main>
 
-  <!-- Scroll-triggered fade-in animations -->
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>Made by Thomas Peters — © <span id="year"></span></div>
+      <div class="footer-links">
+        <a href="https://github.com/thomasPeters31" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../index.html#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="../script.js"></script>
-  <script>
-    // Keep the footer copyright year current automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

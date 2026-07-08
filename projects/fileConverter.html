@@ -3,138 +3,133 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>File Converter | Thomas Peters</title>
+  <title>File Converter — Case Study | Thomas Peters</title>
   <meta name="description" content="Case study for Thomas Peters' File Converter — a C# .NET desktop utility for converting files between formats.">
-  <link rel="icon" type="image/jpg" href="../assets/headshot.JPG">
-  <!-- Global styles shared across the entire site -->
+  <link rel="canonical" href="https://www.thomas-peters.org/projects/fileConverter.html">
+  <meta name="theme-color" content="#121214">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
-  <!-- =====================================================================
-       Site Header
-       Identical across all pages for consistent navigation.
-  ====================================================================== -->
-  <header>
-    <div class="logo">
-      <div class="mark">TP</div>
-      <div>
-        <div style="font-weight:700">Thomas Peters</div>
-        <div class="muted" style="font-size:13px">
-          Aspiring Software Engineer | Computer Science Student at Keele University
-        </div>
-      </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="nav-row">
+      <a class="brand" href="../index.html">
+        <span class="mark">TP</span>
+        Thomas Peters
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
     </div>
-    <nav id="site-nav">
-      <a class="outline" href="../index.html#projects">Projects</a>
-      <a class="outline" href="../index.html#skills">Skills</a>
-      <a class="outline" href="../index.html#contact">Contact</a>
-      <a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a>
-    </nav>
   </header>
 
-  <!-- =====================================================================
-       Page Content
-  ====================================================================== -->
-  <main class="container">
+  <main id="main">
+    <section style="border-top:none; padding-bottom: 40px;">
+      <div class="wrap">
+        <div class="breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <a href="all-projects.html">All projects</a>
+          <span>/</span>
+          <span>File Converter</span>
+        </div>
 
-    <!-- Hero Card
-         Breadcrumb trail, project title, summary, CTA buttons, and snapshot panel.
-         Two-column on desktop, single column on mobile.
-    -->
-    <section class="card fade-in">
-
-      <!-- Breadcrumb navigation -->
-      <div class="breadcrumbs">
-        <a href="../index.html">Home</a>
-        <span>/</span>
-        <a href="all-projects.html">All projects</a>
-        <span>/</span>
-        <span>File Converter</span>
-      </div>
-
-      <!-- Hero: title + description on the left, project snapshot panel on the right -->
-      <div class="page-hero" style="margin-top:16px">
-        <div>
-          <h1 style="margin-top:0">File Converter</h1>
-          <p class="sub">
-            A desktop utility built in C# and .NET that lets users convert files between common formats through
-            a clean, straightforward interface. Built to explore application development outside of the web.
-          </p>
-          <!-- No public repo — only a back link -->
-          <div class="cta-row">
-            <a class="outline" href="all-projects.html">Back to projects</a>
+        <div class="page-hero-grid">
+          <div class="fade-in">
+            <h1>File Converter</h1>
+            <p class="lede">
+              A desktop utility built in C# and .NET that lets users convert files between common formats through
+              a clean, straightforward interface. Built to explore application development outside of the web.
+            </p>
+            <div class="btn-row">
+              <a class="btn-outline" href="all-projects.html">Back to projects</a>
+            </div>
+          </div>
+          <div class="snapshot fade-in">
+            <h4>Project snapshot</h4>
+            <dl>
+              <div><dt>Role</dt><dd>Developer</dd></div>
+              <div><dt>Focus</dt><dd>Desktop utility, file handling, UI</dd></div>
+              <div><dt>Status</dt><dd>Completed</dd></div>
+            </dl>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Snapshot panel: role, focus, and status at a glance -->
-        <div class="detail-card">
-          <h4 style="margin:0 0 10px">Project snapshot</h4>
-          <p class="muted" style="margin:0 0 8px">Role: Developer</p>
-          <p class="muted" style="margin:0 0 8px">Focus: Desktop utility, file handling, UI</p>
-          <p class="muted" style="margin:0">Status: Completed</p>
+    <section>
+      <div class="wrap">
+        <h2>Goals and approach</h2>
+        <p>
+          The goal was to build a practical desktop tool that handles file format conversion reliably, while
+          keeping the interface simple enough for any user to pick up immediately. This project pushed me into
+          C# and .NET application development beyond the browser, covering file I/O, event-driven UI, and error
+          handling.
+        </p>
+        <div class="detail-grid">
+          <div class="detail-block fade-in">
+            <h4>Key features</h4>
+            <p>File selection, format conversion between supported types, and clear feedback on success or failure.</p>
+          </div>
+          <div class="detail-block fade-in">
+            <h4>User interface</h4>
+            <p>Clean, minimal UI built to keep the user focused on the task — pick a file, pick a format, convert.</p>
+          </div>
+          <div class="detail-block fade-in">
+            <h4>What I learned</h4>
+            <p>Practical experience with C# file handling, .NET desktop application structure, and building event-driven UIs.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Goals and Approach Section
-         Three detail cards covering key features, UI design, and learning outcomes.
-    -->
-    <section class="card fade-in" style="margin-top:18px">
-      <h2 style="margin-top:0">Goals and approach</h2>
-      <p class="muted">
-        The goal was to build a practical desktop tool that handles file format conversion reliably, while keeping
-        the interface simple enough for any user to pick up immediately. This project pushed me into C# and .NET
-        application development beyond the browser, covering file I/O, event-driven UI, and error handling.
-      </p>
-      <div class="detail-grid" style="margin-top:14px">
-        <div class="detail-card">
-          <h4 style="margin:0 0 8px">Key features</h4>
-          <p class="muted" style="margin:0">File selection, format conversion between supported types, and clear feedback on success or failure.</p>
-        </div>
-        <div class="detail-card">
-          <h4 style="margin:0 0 8px">User interface</h4>
-          <p class="muted" style="margin:0">Clean, minimal UI built to keep the user focused on the task — pick a file, pick a format, convert.</p>
-        </div>
-        <div class="detail-card">
-          <h4 style="margin:0 0 8px">What I learned</h4>
-          <p class="muted" style="margin:0">Practical experience with C# file handling, .NET desktop application structure, and building event-driven UIs.</p>
+    <section>
+      <div class="wrap">
+        <h2>Tech stack</h2>
+        <div class="tag-list">
+          <span class="tag">C#</span>
+          <span class="tag">.NET</span>
+          <span class="tag">Desktop UI</span>
         </div>
       </div>
     </section>
 
-    <!-- Tech Stack Section -->
-    <section class="card fade-in" style="margin-top:18px">
-      <h2 style="margin-top:0">Tech stack</h2>
-      <div class="tag-list">
-        <span class="tag">C#</span>
-        <span class="tag">.NET</span>
-        <span class="tag">Desktop UI</span>
+    <section>
+      <div class="wrap">
+        <h2>Outcome</h2>
+        <p>
+          A working desktop utility that demonstrates practical C# and .NET skills. Building outside of the web
+          stack gave me a broader perspective on application architecture and strengthened my understanding of
+          typed, compiled languages.
+        </p>
       </div>
     </section>
-
-    <!-- Outcome Section -->
-    <section class="card fade-in" style="margin-top:18px">
-      <h2 style="margin-top:0">Outcome</h2>
-      <p class="muted">
-        A working desktop utility that demonstrates practical C# and .NET skills. Building outside of the web
-        stack gave me a broader perspective on application architecture and strengthened my understanding of
-        typed, compiled languages.
-      </p>
-    </section>
-
-    <!-- Footer -->
-    <footer class="fade-in">
-      <div class="muted">Made by Thomas Peters — © <span id="year"></span></div>
-    </footer>
-
   </main>
 
-  <!-- Scroll-triggered fade-in animations -->
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>Made by Thomas Peters — © <span id="year"></span></div>
+      <div class="footer-links">
+        <a href="https://github.com/thomasPeters31" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../index.html#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
   <script src="../script.js"></script>
-  <script>
-    // Keep the footer copyright year current automatically
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>

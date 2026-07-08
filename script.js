@@ -1,26 +1,68 @@
 /**
  * script.js
- * Handles scroll-triggered fade-in animations for cards and sections.
- * Applied globally across all pages via the .fade-in class.
+ * Shared behaviour across all pages: mobile nav toggle, scroll fade-ins,
+ * footer year, and lightweight email de-obfuscation.
  */
 
-// Collect every element that should animate in on scroll
+// ---------------------------------------------------------------------------
+// Mobile nav toggle
+// ---------------------------------------------------------------------------
+const navToggle = document.querySelector('.nav-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', String(isOpen));
+  });
+
+  navLinks.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    });
+  });
+}
+
+// ---------------------------------------------------------------------------
+// Scroll-triggered fade-ins (skipped entirely for reduced-motion users)
+// ---------------------------------------------------------------------------
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 const faders = document.querySelectorAll('.fade-in');
 
-// Trigger when 20% of the element is visible; add a bottom margin so
-// elements animate before they fully reach the edge of the viewport
-const appearOptions = {
-  threshold: 0.2,
-  rootMargin: "0px 0px -50px 0px"
-};
+if (prefersReducedMotion) {
+  faders.forEach((el) => el.classList.add('visible'));
+} else {
+  const appearOnScroll = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+  );
+  faders.forEach((el) => appearOnScroll.observe(el));
+}
 
-// Add .visible once the element enters the viewport, then stop observing it
-const appearOnScroll = new IntersectionObserver(function(entries, observer) {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add('visible');
-    observer.unobserve(entry.target);
-  });
-}, appearOptions);
+// ---------------------------------------------------------------------------
+// Footer year
+// ---------------------------------------------------------------------------
+const yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-faders.forEach(fader => appearOnScroll.observe(fader));
+// ---------------------------------------------------------------------------
+// Email de-obfuscation
+// Built at runtime from reversed parts so plain-text scrapers don't pick up
+// the address straight from the HTML source.
+// ---------------------------------------------------------------------------
+document.querySelectorAll('[data-email-user]').forEach((el) => {
+  const user = el.getAttribute('data-email-user').split('').reverse().join('');
+  const domain = el.getAttribute('data-email-domain').split('').reverse().join('');
+  const address = `${user}@${domain}`;
+  if (el.tagName === 'A') {
+    el.href = `mailto:${address}`;
+  }
+  el.textContent = address;
+});
