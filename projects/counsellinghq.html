@@ -10,13 +10,19 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fraunces for display headings, Inter for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Global styles shared across the entire site -->
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
+  <!-- Skip link: lets keyboard/screen-reader users jump past the nav -->
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- =====================================================================
+       Site Header — identical across all pages for consistent navigation.
+  ====================================================================== -->
   <header class="site-header">
     <div class="nav-row">
       <a class="brand" href="../index.html">
@@ -30,6 +36,7 @@
         <li><a href="../index.html#contact">Contact</a></li>
         <li><a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
       </ul>
+      <!-- Hamburger button — only shown below 860px breakpoint (see styles.css) -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -37,8 +44,15 @@
   </header>
 
   <main id="main">
+
+    <!-- =====================================================================
+         Hero — breadcrumb trail, title, description, CTA buttons, and
+         project snapshot panel. Two-column on desktop, stacks on mobile.
+    ====================================================================== -->
     <section style="border-top:none; padding-bottom: 40px;">
       <div class="wrap">
+
+        <!-- Breadcrumb navigation: Home / All projects / CounsellingHQ -->
         <div class="breadcrumbs">
           <a href="../index.html">Home</a>
           <span>/</span>
@@ -48,18 +62,23 @@
         </div>
 
         <div class="page-hero-grid">
+
+          <!-- Left column: title, summary, and CTA buttons -->
           <div class="fade-in">
             <h1>CounsellingHQ</h1>
             <p class="lede">
               A professional website built for a counselling service client, designed to be welcoming, clear,
               and easy to navigate for people seeking mental health support.
             </p>
+            <!-- Primary CTA: repo. Secondary: live site and back to listing -->
             <div class="btn-row">
               <a class="btn" href="https://github.com/thomasPeters31/therapyWebsite" target="_blank" rel="noopener">View repo</a>
               <a class="btn-outline" href="https://www.counsellinghq.co.uk" target="_blank" rel="noopener">Visit live site</a>
               <a class="btn-outline" href="all-projects.html">Back to projects</a>
             </div>
           </div>
+
+          <!-- Right column: project snapshot — role, focus, status at a glance -->
           <div class="snapshot fade-in">
             <h4>Project snapshot</h4>
             <dl>
@@ -72,6 +91,10 @@
       </div>
     </section>
 
+    <!-- =====================================================================
+         Goals and Approach — three detail blocks covering key features,
+         design decisions, and the client collaboration process.
+    ====================================================================== -->
     <section>
       <div class="wrap">
         <h2>Goals and approach</h2>
@@ -97,6 +120,7 @@
       </div>
     </section>
 
+    <!-- Tech Stack — pill tags listing the technologies used -->
     <section>
       <div class="wrap">
         <h2>Tech stack</h2>
@@ -108,6 +132,7 @@
       </div>
     </section>
 
+    <!-- Outcome — summary of results and what the project demonstrates -->
     <section>
       <div class="wrap">
         <h2>Outcome</h2>
@@ -117,8 +142,10 @@
         </p>
       </div>
     </section>
+
   </main>
 
+  <!-- Footer — copyright year filled by script.js, links to socials -->
   <footer class="site-footer">
     <div class="wrap footer-row">
       <div>Made by Thomas Peters — © <span id="year"></span></div>
@@ -130,6 +157,7 @@
     </div>
   </footer>
 
+  <!-- Scroll-triggered fade-ins, mobile nav toggle, footer year, email de-obfuscation -->
   <script src="../script.js"></script>
 </body>
 </html>

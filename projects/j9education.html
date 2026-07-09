@@ -10,11 +10,14 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fraunces for display headings, Inter for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Global styles shared across the entire site -->
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
+  <!-- Skip link: lets keyboard/screen-reader users jump past the nav -->
   <a class="skip-link" href="#main">Skip to content</a>
 
   <!-- =====================================================================
@@ -33,6 +36,7 @@
         <li><a href="../index.html#contact">Contact</a></li>
         <li><a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
       </ul>
+      <!-- Hamburger button — only shown below 860px breakpoint (see styles.css) -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -141,7 +145,7 @@
 
   </main>
 
-  <!-- Footer -->
+  <!-- Footer — copyright year filled by script.js, links to socials -->
   <footer class="site-footer">
     <div class="wrap footer-row">
       <div>Made by Thomas Peters — © <span id="year"></span></div>
@@ -153,7 +157,7 @@
     </div>
   </footer>
 
-  <!-- Scroll-triggered fade-in animations -->
+  <!-- Scroll-triggered fade-ins, mobile nav toggle, footer year, email de-obfuscation -->
   <script src="../script.js"></script>
 </body>
 </html>

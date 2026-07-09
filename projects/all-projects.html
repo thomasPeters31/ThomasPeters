@@ -10,13 +10,19 @@
   <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fraunces for display headings, Inter for body text -->
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Global styles shared across the entire site -->
   <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
+  <!-- Skip link: lets keyboard/screen-reader users jump past the nav -->
   <a class="skip-link" href="#main">Skip to content</a>
 
+  <!-- =====================================================================
+       Site Header — identical across all pages for consistent navigation.
+  ====================================================================== -->
   <header class="site-header">
     <div class="nav-row">
       <a class="brand" href="../index.html">
@@ -30,6 +36,7 @@
         <li><a href="../index.html#contact">Contact</a></li>
         <li><a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
       </ul>
+      <!-- Hamburger button — only shown below 860px breakpoint (see styles.css) -->
       <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
@@ -37,8 +44,15 @@
   </header>
 
   <main id="main">
+
+    <!-- =====================================================================
+         Project Listing — breadcrumb, page title, and full project list.
+         Each row links to its individual case study page.
+    ====================================================================== -->
     <section style="border-top:none">
       <div class="wrap">
+
+        <!-- Breadcrumb navigation: Home / All projects -->
         <div class="breadcrumbs">
           <a href="../index.html">Home</a>
           <span>/</span>
@@ -51,7 +65,10 @@
         </div>
         <p class="lede" style="margin-bottom: 0;">A complete list of my projects. Each entry links to its case study.</p>
 
+        <!-- Project rows — each links to its own case study page -->
         <div class="project-list" style="margin-top: 16px;">
+
+          <!-- CounsellingHQ — live client site for a counselling service -->
           <a class="project-row fade-in" href="counsellinghq.html">
             <div>
               <div class="title-row">
@@ -68,6 +85,7 @@
             <span class="arrow" aria-hidden="true">→</span>
           </a>
 
+          <!-- Esports Website — live site for the Yokai esports team -->
           <a class="project-row fade-in" href="esports.html">
             <div>
               <div class="title-row">
@@ -84,6 +102,7 @@
             <span class="arrow" aria-hidden="true">→</span>
           </a>
 
+          <!-- Portfolio Website — this site -->
           <a class="project-row fade-in" href="portfolio.html">
             <div>
               <div class="title-row">
@@ -100,6 +119,7 @@
             <span class="arrow" aria-hidden="true">→</span>
           </a>
 
+          <!-- J9Education — in-development client site for a maths tutor -->
           <a class="project-row fade-in" href="j9education.html">
             <div>
               <div class="title-row">
@@ -115,11 +135,14 @@
             </div>
             <span class="arrow" aria-hidden="true">→</span>
           </a>
+
         </div>
       </div>
     </section>
+
   </main>
 
+  <!-- Footer — copyright year filled by script.js, links to socials -->
   <footer class="site-footer">
     <div class="wrap footer-row">
       <div>Made by Thomas Peters — © <span id="year"></span></div>
@@ -131,6 +154,7 @@
     </div>
   </footer>
 
+  <!-- Scroll-triggered fade-ins, mobile nav toggle, footer year, email de-obfuscation -->
   <script src="../script.js"></script>
 </body>
 </html>
