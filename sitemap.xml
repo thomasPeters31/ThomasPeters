@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.thomas-peters.org/</loc>
+    <loc>https://www.thomasoliverpeters.com/</loc>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.thomas-peters.org/projects/all-projects.html</loc>
+    <loc>https://www.thomasoliverpeters.com/projects/all-projects.html</loc>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.thomas-peters.org/projects/counsellinghq.html</loc>
+    <loc>https://www.thomasoliverpeters.com/projects/counsellinghq.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thomas-peters.org/projects/esports.html</loc>
+    <loc>https://www.thomasoliverpeters.com/projects/esports.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thomas-peters.org/projects/portfolio.html</loc>
+    <loc>https://www.thomasoliverpeters.com/projects/portfolio.html</loc>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://www.thomas-peters.org/projects/fileConverter.html</loc>
+    <loc>https://www.thomasoliverpeters.com/projects/fileConverter.html</loc>
     <priority>0.6</priority>
   </url>
 </urlset>

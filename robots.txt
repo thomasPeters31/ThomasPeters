@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.thomas-peters.org/sitemap.xml
+Sitemap: https://www.thomasoliverpeters.com/sitemap.xml
 
 # As a condition of accessing this website, you agree to abide by the following
 # content signals:
