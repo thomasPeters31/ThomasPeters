@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valorant Veto Assistant — Case Study | Thomas Peters</title>
+  <meta name="description" content="Case study for the Valorant Veto Assistant — a Python machine learning project that predicts map win probability for esports map veto decisions, built by Thomas Peters.">
+  <link rel="canonical" href="https://www.thomasoliverpeters.com/projects/valorant-veto-assistant.html">
+  <meta name="theme-color" content="#121214">
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Fraunces for display headings, Inter for body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Global styles shared across the entire site -->
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+  <!-- Skip link: lets keyboard/screen-reader users jump past the nav -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- =====================================================================
+       Site Header — identical across all pages for consistent navigation.
+  ====================================================================== -->
+  <header class="site-header">
+    <div class="nav-row">
+      <a class="brand" href="../index.html">
+        <span class="mark">TP</span>
+        Thomas Peters
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#experience">Experience</a></li>
+        <li><a href="../index.html#projects">Projects</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a class="btn" href="../assets/CV.pdf" target="_blank" rel="noopener">Download CV</a></li>
+      </ul>
+      <!-- Hamburger button — only shown below 860px breakpoint (see styles.css) -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- =====================================================================
+         Hero — breadcrumb, title, description, CTA buttons, snapshot panel.
+         Two-column on desktop, single column on mobile.
+    ====================================================================== -->
+    <section style="border-top:none; padding-bottom: 40px;">
+      <div class="wrap">
+        <div class="breadcrumbs">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <a href="all-projects.html">All projects</a>
+          <span>/</span>
+          <span>Valorant Veto Assistant</span>
+        </div>
+
+        <div class="page-hero-grid">
+          <div class="fade-in">
+            <h1>Valorant Veto Assistant</h1>
+            <p class="lede">
+              A machine learning project that helps esports team managers during the map veto phase of Valorant
+              tournaments. Given two teams and a map, it estimates the probability that one team beats the other on
+              that map — turning a time-pressured, memory-based decision into a data-driven one.
+            </p>
+            <!-- Primary CTA: repo. Secondary: back to listing -->
+            <div class="btn-row">
+              <a class="btn" href="https://github.com/thomasPeters31/valourantVetoAssistant" target="_blank" rel="noopener">View repo</a>
+              <a class="btn-outline" href="all-projects.html">Back to projects</a>
+            </div>
+          </div>
+
+          <!-- Snapshot panel: role, focus, and status at a glance -->
+          <div class="snapshot fade-in">
+            <h4>Project snapshot</h4>
+            <dl>
+              <div><dt>Role</dt><dd>Solo — data, modelling, analysis</dd></div>
+              <div><dt>Focus</dt><dd>Web scraping, ML modelling, evaluation</dd></div>
+              <div><dt>Status</dt><dd>Complete</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Goals and Approach — three detail blocks covering key areas.
+    ====================================================================== -->
+    <section>
+      <div class="wrap">
+        <h2>Goals and approach</h2>
+        <p>
+          Map veto happens under time pressure with incomplete information. The aim was to see whether a model
+          trained on historical professional results could give managers a useful win-probability estimate for a
+          given team, opponent, and map. I built the full pipeline: scraping match data, engineering features, and
+          comparing several modelling approaches against a simple baseline.
+        </p>
+        <div class="detail-grid">
+          <div class="detail-block fade-in">
+            <h4>Data collection</h4>
+            <p>Scraped roughly 7,800 professional matches (~18,400 map results) from VLR.gg across two years and all
+              regions, with local page caching to avoid repeated requests to the site.</p>
+          </div>
+          <div class="detail-block fade-in">
+            <h4>Modelling</h4>
+            <p>Built a frequency-based baseline, a logistic regression trained with gradient descent implemented from
+              scratch, and a PyTorch multilayer perceptron — then ran feature ablation studies to compare them.</p>
+          </div>
+          <div class="detail-block fade-in">
+            <h4>Evaluation</h4>
+            <p>Used a time-based train/test split so the model is always predicting future matches, and traced and
+              fixed a data-leakage bug involving attack/defence metrics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Tech Stack
+    ====================================================================== -->
+    <section>
+      <div class="wrap">
+        <h2>Tech stack</h2>
+        <div class="tag-list">
+          <span class="tag">Python</span>
+          <span class="tag">PyTorch</span>
+          <span class="tag">NumPy</span>
+          <span class="tag">Machine learning</span>
+          <span class="tag">Web scraping</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         Outcome
+    ====================================================================== -->
+    <section>
+      <div class="wrap">
+        <h2>Outcome</h2>
+        <p>
+          All models converged around 55–57% accuracy regardless of features or architecture. The key finding was
+          that data sparsity — not the choice of model — is the limiting factor, since most team-and-map pairs have
+          fewer than 10 historical games. The project documents what did and didn't work, and gave me hands-on
+          experience with the full ML workflow: data pipeline, feature engineering, model comparison, and honest
+          evaluation.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer — copyright year filled by script.js, links to socials -->
+  <footer class="site-footer">
+    <div class="wrap footer-row">
+      <div>Made by Thomas Peters — © <span id="year"></span></div>
+      <div class="footer-links">
+        <a href="https://github.com/thomasPeters31" target="_blank" rel="noopener">GitHub</a>
+        <a href="https://www.linkedin.com/in/thomas-peters-69949b268/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="../index.html#top">Back to top</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll-triggered fade-ins, mobile nav toggle, footer year, email de-obfuscation -->
+  <script src="../script.js"></script>
+</body>
+</html>
